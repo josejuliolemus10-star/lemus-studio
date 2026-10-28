@@ -1264,18 +1264,107 @@ for (let i = 0; i < nodeCount; i++) {
   });
 }
 
-// Mouse interaction
+// Interactive Touch & Pointer Physics Rig for Mobile & Desktop
+const canvas = renderer.domElement;
+canvas.style.touchAction = 'pan-y';
+canvas.style.cursor = 'grab';
+
+let isPointerDown = false;
+let startTouchX = 0;
+let startTouchY = 0;
+let lastTouchX = 0;
+let lastTouchY = 0;
+let velX = 0;
+let velY = 0;
 let mouseX = 0;
 let mouseY = 0;
-let targetX = 0;
-let targetY = 0;
 
-function onMouseMove(event) {
+// Mobile Touch Events (iOS & Android)
+canvas.addEventListener('touchstart', function(e) {
+  if (e.touches.length === 1) {
+    isPointerDown = true;
+    startTouchX = e.touches[0].clientX;
+    startTouchY = e.touches[0].clientY;
+    lastTouchX = startTouchX;
+    lastTouchY = startTouchY;
+    velX = 0;
+    velY = 0;
+
+    const rect = container.getBoundingClientRect();
+    mouseX = ((startTouchX - rect.left) / rect.width) * 2 - 1;
+    mouseY = -(((startTouchY - rect.top) / rect.height) * 2 - 1);
+  }
+}, { passive: true });
+
+canvas.addEventListener('touchmove', function(e) {
+  if (!isPointerDown || e.touches.length !== 1) return;
+  const curX = e.touches[0].clientX;
+  const curY = e.touches[0].clientY;
+  const deltaX = curX - lastTouchX;
+  const deltaY = curY - lastTouchY;
+
+  // Direct tactile 3D rotation with touch finger
+  group.rotation.y += deltaX * 0.01;
+  group.rotation.x += deltaY * 0.008;
+
+  velX = deltaX * 0.01;
+  velY = deltaY * 0.008;
+
+  lastTouchX = curX;
+  lastTouchY = curY;
+
   const rect = container.getBoundingClientRect();
-  mouseX = ((event.clientX - rect.left) / rect.width) * 2 - 1;
-  mouseY = -(((event.clientY - rect.top) / rect.height) * 2 - 1);
-}
-window.addEventListener('mousemove', onMouseMove);
+  mouseX = ((curX - rect.left) / rect.width) * 2 - 1;
+  mouseY = -(((curY - rect.top) / rect.height) * 2 - 1);
+
+  // Prevent scroll only when gesture is an intentional horizontal/rotational manipulation
+  const totalDx = Math.abs(curX - startTouchX);
+  const totalDy = Math.abs(curY - startTouchY);
+  if (totalDx > totalDy * 0.7 && totalDx > 5) {
+    if (e.cancelable) e.preventDefault();
+  }
+}, { passive: false });
+
+window.addEventListener('touchend', function() {
+  isPointerDown = false;
+});
+window.addEventListener('touchcancel', function() {
+  isPointerDown = false;
+});
+
+// Desktop Mouse Click-and-Drag + Hover
+canvas.addEventListener('mousedown', function(e) {
+  isPointerDown = true;
+  lastTouchX = e.clientX;
+  lastTouchY = e.clientY;
+  velX = 0;
+  velY = 0;
+  canvas.style.cursor = 'grabbing';
+});
+
+window.addEventListener('mousemove', function(e) {
+  const rect = container.getBoundingClientRect();
+  mouseX = ((e.clientX - rect.left) / rect.width) * 2 - 1;
+  mouseY = -(((e.clientY - rect.top) / rect.height) * 2 - 1);
+
+  if (isPointerDown) {
+    const deltaX = e.clientX - lastTouchX;
+    const deltaY = e.clientY - lastTouchY;
+    group.rotation.y += deltaX * 0.01;
+    group.rotation.x += deltaY * 0.008;
+    velX = deltaX * 0.01;
+    velY = deltaY * 0.008;
+    lastTouchX = e.clientX;
+    lastTouchY = e.clientY;
+  }
+});
+
+window.addEventListener('mouseup', function() {
+  if (isPointerDown) {
+    isPointerDown = false;
+    canvas.style.cursor = 'grab';
+  }
+});
 
 // Animation Loop
 let clock = new THREE.Clock();
@@ -1284,11 +1373,22 @@ function animate() {
   requestAnimationFrame(animate);
   const elapsedTime = clock.getElapsedTime();
 
-  targetX = mouseX * 0.8;
-  targetY = mouseY * 0.6;
+  if (isPointerDown) {
+    // Actively rotated by touch gesture
+  } else {
+    // Inertia physics decay after release
+    group.rotation.y += velX;
+    group.rotation.x += velY;
+    velX *= 0.94;
+    velY *= 0.94;
 
-  group.rotation.y += (targetX - group.rotation.y) * 0.05 + 0.005;
-  group.rotation.x += (-targetY - group.rotation.x) * 0.05 + 0.003;
+    // Steady subtle ambient rotation
+    group.rotation.y += 0.004;
+
+    // Gentle camera parallax tracking when mouse moves
+    const targetTiltX = mouseX * 0.15;
+    group.rotation.z += (targetTiltX - group.rotation.z) * 0.04;
+  }
 
   outerMesh.rotation.y = -elapsedTime * 0.15;
   outerMesh.rotation.z = elapsedTime * 0.08;
