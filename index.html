@@ -1,0 +1,2297 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Lemus Studio — Software &amp; Páginas Web de Alto Impacto</title>
+<!-- Google Fonts & Material Symbols -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&amp;family=Geist:wght@300;400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS v3 -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface-dim": "#080808",
+            "surface-tint": "#c6c6c7",
+            "background": "#080808",
+            "error-container": "#93000a",
+            "on-background": "#e5e2e1",
+            "surface-container-high": "#222222",
+            "secondary-container": "#2a2a2a",
+            "primary": "#ffffff",
+            "on-primary": "#0a0a0a",
+            "surface-variant": "#1c1c1c",
+            "surface": "#080808",
+            "surface-muted": "#161616",
+            "outline": "#444748",
+            "outline-variant": "#2a2a2a",
+            "border-subtle": "#222222",
+            "surface-container": "#141414",
+            "surface-container-low": "#101010",
+            "surface-container-lowest": "#0a0a0a",
+            "surface-container-highest": "#1c1c1c",
+            "on-surface": "#ededed",
+            "on-surface-variant": "#9a9a9a",
+            "tertiary": "#ffffff",
+            "canvas-pure": "#080808"
+          },
+          "borderRadius": {
+            "DEFAULT": "1rem",
+            "lg": "2rem",
+            "xl": "3rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-md": "1rem",
+            "space-sm": "0.5rem",
+            "margin": "4rem",
+            "margin-mobile": "1.25rem",
+            "gutter": "1.5rem",
+            "space-lg": "1.5rem",
+            "space-xl": "3rem",
+            "space-xs": "0.25rem",
+            "gutter-mobile": "1rem"
+          },
+          "fontFamily": {
+            "headline-md": ["Hanken Grotesk", "sans-serif"],
+            "display-xl-mobile": ["Hanken Grotesk", "sans-serif"],
+            "body-sm": ["Hanken Grotesk", "sans-serif"],
+            "display-xl": ["Hanken Grotesk", "sans-serif"],
+            "headline-lg-mobile": ["Hanken Grotesk", "sans-serif"],
+            "label-pill": ["Geist", "monospace"],
+            "label-code": ["Geist", "monospace"],
+            "headline-sm": ["Hanken Grotesk", "sans-serif"],
+            "headline-lg": ["Hanken Grotesk", "sans-serif"],
+            "body-md": ["Hanken Grotesk", "sans-serif"],
+            "body-lg": ["Hanken Grotesk", "sans-serif"]
+          },
+          "fontSize": {
+            "headline-md": ["32px", { "lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "display-xl-mobile": ["40px", { "lineHeight": "44px", "letterSpacing": "-0.03em", "fontWeight": "800" }],
+            "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "display-xl": ["72px", { "lineHeight": "76px", "letterSpacing": "-0.04em", "fontWeight": "800" }],
+            "headline-lg-mobile": ["32px", { "lineHeight": "36px", "letterSpacing": "-0.025em", "fontWeight": "700" }],
+            "label-pill": ["11px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "600" }],
+            "label-code": ["12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500" }],
+            "headline-sm": ["24px", { "lineHeight": "30px", "letterSpacing": "-0.015em", "fontWeight": "600" }],
+            "headline-lg": ["48px", { "lineHeight": "52px", "letterSpacing": "-0.03em", "fontWeight": "700" }],
+            "body-md": ["15px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "400" }],
+            "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "400" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    ::selection {
+      background-color: #ffffff;
+      color: #080808;
+    }
+    html:not(.dark) ::selection {
+      background-color: #080808;
+      color: #ffffff;
+    }
+
+    /* Universal fluid theme transitions */
+    body, header, nav, main, section, article, footer, div, span, h1, h2, h3, p, a, button {
+      transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    /* Light mode adaptive styling */
+    html:not(.dark) body {
+      background-color: #f7f7f8;
+      color: #111111;
+    }
+    html:not(.dark) #nav-island {
+      background-color: rgba(255, 255, 255, 0.88);
+      border-color: rgba(0, 0, 0, 0.08);
+      box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.07);
+    }
+    html:not(.dark) #nav-island.scrolled-nav {
+      background-color: rgba(255, 255, 255, 0.96) !important;
+      border-color: rgba(0, 0, 0, 0.12) !important;
+      box-shadow: 0 20px 35px -8px rgba(0, 0, 0, 0.12) !important;
+    }
+    html:not(.dark) #nav-island a:not(.contact-cta-pill) span,
+    html:not(.dark) #nav-island a:not(.contact-cta-pill) {
+      color: #111111;
+    }
+    html:not(.dark) #nav-island nav a {
+      color: #666666;
+    }
+    html:not(.dark) #nav-island nav a:hover,
+    html:not(.dark) #nav-island nav a.font-semibold {
+      color: #000000;
+    }
+    html:not(.dark) #nav-island nav a:after {
+      background-color: #000000;
+    }
+    html:not(.dark) #nav-island .contact-cta-pill,
+    html:not(.dark) #nav-island .contact-cta-pill span,
+    html:not(.dark) .contact-cta-pill,
+    html:not(.dark) .contact-cta-pill span {
+      background-color: #0a0a0a;
+      color: #ffffff !important;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.15) !important;
+    }
+    html:not(.dark) #nav-island .contact-cta-pill:hover,
+    html:not(.dark) #nav-island .contact-cta-pill:hover span,
+    html:not(.dark) .contact-cta-pill:hover,
+    html:not(.dark) .contact-cta-pill:hover span {
+      background-color: #222222;
+      color: #ffffff !important;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25) !important;
+    }
+    
+    /* Liquid Glass Light Mode Tuning */
+    html:not(.dark) .liquid-glass-hero {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.85) 0%, rgba(245, 245, 247, 0.6) 100%) !important;
+      border-color: rgba(0, 0, 0, 0.08) !important;
+      box-shadow: inset 0 1px 2px 0 rgba(255, 255, 255, 0.9), 0 24px 48px -12px rgba(0, 0, 0, 0.1) !important;
+    }
+    html:not(.dark) .liquid-glass-shimmer {
+      background: linear-gradient(105deg, transparent 20%, rgba(255, 255, 255, 0.7) 50%, transparent 80%) !important;
+    }
+
+    /* Headings & general typography in Light Mode */
+    html:not(.dark) h1, 
+    html:not(.dark) h2, 
+    html:not(.dark) h3, 
+    html:not(.dark) h4 {
+      color: #0a0a0a !important;
+    }
+    html:not(.dark) .subtext-muted {
+      color: #555555 !important;
+    }
+    html:not(.dark) .explore-pill {
+      background-color: #ffffff !important;
+      border-color: rgba(0, 0, 0, 0.12) !important;
+      color: #111111 !important;
+    }
+    html:not(.dark) .explore-pill span {
+      color: #111111 !important;
+    }
+    html:not(.dark) .explore-pill:hover {
+      border-color: #000000 !important;
+      background-color: #f4f4f4 !important;
+    }
+
+    /* Cards in Light Mode */
+    html:not(.dark) article,
+    html:not(.dark) .service-card,
+    html:not(.dark) .quote-card,
+    html:not(.dark) .process-card,
+    html:not(.dark) .faq-card,
+    html:not(.dark) #motion-3d > div,
+    html:not(.dark) .motion-card {
+      background-color: #ffffff !important;
+      border-color: rgba(0, 0, 0, 0.08) !important;
+      box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.04);
+    }
+    html:not(.dark) article:hover,
+    html:not(.dark) .service-card:hover,
+    html:not(.dark) .process-card:hover,
+    html:not(.dark) .faq-card:hover,
+    html:not(.dark) #motion-3d > div:hover,
+    html:not(.dark) .motion-card:hover {
+      border-color: rgba(0, 0, 0, 0.22) !important;
+      box-shadow: 0 16px 36px -8px rgba(0, 0, 0, 0.08) !important;
+    }
+
+    /* FAQ ACCORDION (High-contrast questions & answers) */
+    html:not(.dark) .faq-card .text-white,
+    html:not(.dark) .faq-card .font-headline-sm,
+    html:not(.dark) .faq-card .font-headline-sm span,
+    html:not(.dark) .faq-card > div:first-child span {
+      color: #0a0a0a !important;
+    }
+    html:not(.dark) .faq-card .faq-indicator {
+      color: #444444 !important;
+    }
+    html:not(.dark) .faq-card .faq-answer-content p {
+      color: #444444 !important;
+      border-color: rgba(0, 0, 0, 0.08) !important;
+    }
+    html:not(.dark) .faq-card.is-active {
+      border-color: rgba(0, 0, 0, 0.25) !important;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.06) !important;
+    }
+
+    /* MANIFIESTO LEMUS & STAT COUNTERS */
+    html:not(.dark) #filosofia .text-white,
+    html:not(.dark) #filosofia p.text-white,
+    html:not(.dark) #filosofia .font-headline-sm {
+      color: #0a0a0a !important;
+    }
+    html:not(.dark) #filosofia .lg\:col-span-7 p:not(.text-white) {
+      color: #444444 !important;
+    }
+    html:not(.dark) #filosofia .grid-cols-3 p.text-white {
+      color: #0a0a0a !important;
+    }
+    html:not(.dark) #filosofia .grid-cols-3 .subtext-muted {
+      color: #666666 !important;
+    }
+    html:not(.dark) #filosofia .quote-card p {
+      color: #1a1a1a !important;
+    }
+    html:not(.dark) #filosofia .quote-card .text-white {
+      color: #0a0a0a !important;
+    }
+
+    /* TESTIMONIOS / VOCES DE CLIENTES */
+    html:not(.dark) #testimonios .quote-card p {
+      color: #1a1a1a !important;
+    }
+    html:not(.dark) #testimonios .quote-card .text-white,
+    html:not(.dark) #testimonios .quote-card .font-headline-sm {
+      color: #0a0a0a !important;
+    }
+    html:not(.dark) #testimonios .quote-card .subtext-muted,
+    html:not(.dark) #testimonios .quote-card .text-label-code {
+      color: #666666 !important;
+    }
+    html:not(.dark) #testimonios .quote-card .w-10.h-10 {
+      background-color: #0a0a0a !important;
+      color: #ffffff !important;
+      border-color: rgba(0, 0, 0, 0.1) !important;
+    }
+
+    /* FOOTER READABILITY */
+    html:not(.dark) footer {
+      background-color: #f0f0f2 !important;
+      border-color: rgba(0, 0, 0, 0.08) !important;
+    }
+    html:not(.dark) footer .text-white,
+    html:not(.dark) footer a.text-white,
+    html:not(.dark) footer a.text-white span {
+      color: #0a0a0a !important;
+    }
+    html:not(.dark) footer .text-white\/20 {
+      color: rgba(0, 0, 0, 0.25) !important;
+    }
+    html:not(.dark) footer .subtext-muted {
+      color: #555555 !important;
+    }
+    html:not(.dark) footer a.nav-kinetic-link {
+      color: #555555 !important;
+    }
+    html:not(.dark) footer a.nav-kinetic-link:hover {
+      color: #000000 !important;
+    }
+
+    /* METODOLOGÍA / PROCESO 4 PASOS */
+    html:not(.dark) #proceso .process-card .text-white,
+    html:not(.dark) #proceso .process-card span.font-bold,
+    html:not(.dark) #proceso .process-card span.text-label-code {
+      color: #0a0a0a !important;
+    }
+    html:not(.dark) #proceso .process-card .material-symbols-outlined {
+      color: #222222 !important;
+    }
+    html:not(.dark) #proceso .process-card h3 {
+      color: #0a0a0a !important;
+    }
+    html:not(.dark) #proceso .process-card p {
+      color: #444444 !important;
+    }
+    html:not(.dark) #proceso .process-card .text-\[\#777777\] {
+      color: #555555 !important;
+    }
+
+    /* SERVICIOS / CAPACIDADES */
+    html:not(.dark) #servicios .service-card h3 {
+      color: #0a0a0a !important;
+    }
+    html:not(.dark) #servicios .service-card p {
+      color: #444444 !important;
+    }
+    html:not(.dark) #servicios .service-card .service-arrow {
+      color: #0a0a0a !important;
+    }
+    html:not(.dark) #servicios .service-card .subtext-muted {
+      color: #666666 !important;
+    }
+
+    /* TRABAJOS / PROYECTOS */
+    html:not(.dark) #trabajos article h2 {
+      color: #0a0a0a !important;
+    }
+    html:not(.dark) #trabajos article p {
+      color: #444444 !important;
+    }
+    html:not(.dark) #trabajos article .subtext-muted {
+      color: #555555 !important;
+    }
+    html:not(.dark) #trabajos article .text-\[\#888888\] {
+      color: #444444 !important;
+    }
+
+    /* 3D MOTION SECTION */
+    html:not(.dark) #motion-3d .visual-container-bg {
+      background-color: #f4f4f6 !important;
+      border-color: rgba(0, 0, 0, 0.08) !important;
+    }
+    html:not(.dark) #motion-3d .hud-badge {
+      background-color: rgba(0, 0, 0, 0.06) !important;
+      color: #111111 !important;
+      border-color: rgba(0, 0, 0, 0.1) !important;
+    }
+    html:not(.dark) #motion-3d .hud-text-bright {
+      color: #111111 !important;
+    }
+    html:not(.dark) #motion-3d p {
+      color: #444444 !important;
+    }
+    html:not(.dark) #motion-3d .text-\[\#888888\] {
+      color: #555555 !important;
+    }
+
+    /* CONTACT SECTION */
+    html:not(.dark) #contacto .hero-glyph-box {
+      background-color: #ffffff !important;
+      border-color: rgba(0, 0, 0, 0.12) !important;
+    }
+    html:not(.dark) #contacto h2 {
+      color: #0a0a0a !important;
+    }
+    html:not(.dark) #contacto p {
+      color: #444444 !important;
+    }
+    html:not(.dark) #contacto .contact-box-btn {
+      background-color: #ffffff !important;
+      border-color: rgba(0, 0, 0, 0.15) !important;
+      color: #0a0a0a !important;
+    }
+    html:not(.dark) #contacto .contact-box-btn span {
+      color: #0a0a0a !important;
+    }
+    html:not(.dark) #contacto .contact-box-btn:hover {
+      background-color: #0a0a0a !important;
+      border-color: #0a0a0a !important;
+    }
+    html:not(.dark) #contacto .contact-box-btn:hover span {
+      color: #ffffff !important;
+    }
+    html:not(.dark) #contacto a.nav-kinetic-link {
+      color: #555555 !important;
+    }
+    html:not(.dark) #contacto a.nav-kinetic-link:hover {
+      color: #000000 !important;
+    }
+    html:not(.dark) #contacto .text-\[\#666666\] {
+      color: #666666 !important;
+    }
+
+    /* Tag Pills & CTA Button Contrast Guarantee */
+    html:not(.dark) .card-tag-pill {
+      background-color: #f0f0f2 !important;
+      color: #111111 !important;
+      border-color: rgba(0, 0, 0, 0.08) !important;
+    }
+    html:not(.dark) .card-cta-btn {
+      background-color: #0a0a0a !important;
+      color: #ffffff !important;
+      border-color: #0a0a0a !important;
+    }
+    html:not(.dark) .card-cta-btn span {
+      color: #ffffff !important;
+    }
+    html:not(.dark) .card-cta-btn:hover {
+      background-color: #222222 !important;
+      color: #ffffff !important;
+      border-color: #0a0a0a !important;
+    }
+    html:not(.dark) .card-cta-btn:hover span {
+      color: #ffffff !important;
+    }
+
+    /* Universal Border Dividers in Light Mode */
+    html:not(.dark) .border-divider,
+    html:not(.dark) .border-white\/10,
+    html:not(.dark) .border-white\/5,
+    html:not(.dark) .border-white\/15,
+    html:not(.dark) .border-white\/20 {
+      border-color: rgba(0, 0, 0, 0.08) !important;
+    }
+
+    html:not(.dark) .visual-container-bg {
+      background-color: #f0f0f2 !important;
+      border-color: rgba(0, 0, 0, 0.08) !important;
+    }
+    html:not(.dark) .kinetic-stage-bg {
+      background-color: #0e0e0e !important;
+    }
+    html:not(.dark) .theme-toggle-btn {
+      background-color: #eaeaea;
+      color: #111111;
+      border-color: rgba(0, 0, 0, 0.1);
+    }
+    html:not(.dark) .theme-toggle-btn:hover {
+      background-color: #dedede;
+      border-color: rgba(0, 0, 0, 0.2);
+    }
+
+    /* Scroll reveal base classes */
+    .reveal-item {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+    .reveal-item.revealed {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .delay-100 { transition-delay: 100ms; }
+    .delay-200 { transition-delay: 200ms; }
+    .delay-300 { transition-delay: 300ms; }
+    .delay-400 { transition-delay: 400ms; }
+
+    /* ========================================================= */
+    /* LIQUID GLASS HERO BADGE & KINETIC AMBIENT MOTION          */
+    /* ========================================================= */
+    .liquid-glass-hero {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%);
+      backdrop-filter: blur(28px) saturate(190%);
+      -webkit-backdrop-filter: blur(28px) saturate(190%);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      box-shadow: 
+        inset 0 1.5px 1.5px 0 rgba(255, 255, 255, 0.45),
+        inset 0 -1.5px 1.5px 0 rgba(0, 0, 0, 0.35),
+        0 24px 50px -15px rgba(0, 0, 0, 0.7),
+        0 0 30px -5px rgba(255, 255, 255, 0.08);
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease;
+    }
+    .liquid-glass-hero:hover {
+      transform: translateY(-4px) scale(1.02);
+      border-color: rgba(255, 255, 255, 0.35);
+      box-shadow: 
+        inset 0 2px 2px 0 rgba(255, 255, 255, 0.6),
+        inset 0 -2px 2px 0 rgba(0, 0, 0, 0.4),
+        0 30px 65px -12px rgba(0, 0, 0, 0.85),
+        0 0 40px rgba(255, 255, 255, 0.15);
+    }
+    @keyframes liquidShimmer {
+      0% { transform: translateX(-160%) rotate(25deg); }
+      100% { transform: translateX(260%) rotate(25deg); }
+    }
+    .liquid-glass-shimmer {
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(105deg, transparent 35%, rgba(255, 255, 255, 0.18) 50%, transparent 65%);
+      pointer-events: none;
+      animation: liquidShimmer 6s infinite cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* ========================================================= */
+    /* ACCORDION FAQ EXCLUSIVO CON TRANSICIÓN MINIMALISTA        */
+    /* ========================================================= */
+    .faq-card {
+      transition: background-color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+    }
+    .faq-card.is-active {
+      border-color: rgba(255, 255, 255, 0.35) !important;
+    }
+    html:not(.dark) .faq-card.is-active {
+      border-color: rgba(0, 0, 0, 0.3) !important;
+    }
+    .faq-answer-wrapper {
+      display: grid;
+      grid-template-rows: 0fr;
+      transition: grid-template-rows 0.38s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .faq-card.is-active .faq-answer-wrapper {
+      grid-template-rows: 1fr;
+    }
+    .faq-answer-content {
+      overflow: hidden;
+      opacity: 0;
+      transform: translateY(-4px);
+      transition: opacity 0.32s cubic-bezier(0.16, 1, 0.3, 1), transform 0.32s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .faq-card.is-active .faq-answer-content {
+      opacity: 1;
+      transform: translateY(0);
+      transition-delay: 0.05s;
+    }
+    .faq-indicator {
+      transition: transform 0.38s cubic-bezier(0.34, 1.56, 0.64, 1), color 0.25s ease;
+    }
+    .faq-card.is-active .faq-indicator {
+      transform: rotate(45deg);
+      color: #ffffff;
+    }
+    html:not(.dark) .faq-card.is-active .faq-indicator {
+      color: #000000;
+    }
+
+    /* Kinetic Easing Preset */
+    :root {
+      --ease-elastic: cubic-bezier(0.34, 1.56, 0.64, 1);
+      --ease-smooth: cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    @keyframes kineticSweep {
+      0% { transform: translateX(-150%) skewX(-20deg); }
+      100% { transform: translateX(250%) skewX(-20deg); }
+    }
+
+    @keyframes orbitalPulse {
+      0%, 100% {
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4), 0 0 16px rgba(255, 255, 255, 0.2);
+      }
+      50% {
+        box-shadow: 0 0 0 6px rgba(255, 255, 255, 0), 0 0 28px rgba(255, 255, 255, 0.45);
+      }
+    }
+
+    @keyframes orbitalPulseLight {
+      0%, 100% {
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.3), 0 0 14px rgba(0, 0, 0, 0.15);
+      }
+      50% {
+        box-shadow: 0 0 0 6px rgba(0, 0, 0, 0), 0 0 22px rgba(0, 0, 0, 0.25);
+      }
+    }
+
+    @keyframes tactileRipple {
+      0% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 0.8;
+      }
+      100% {
+        transform: translate(-50%, -50%) scale(3.5);
+        opacity: 0;
+      }
+    }
+
+    @keyframes copyConfettiParticle {
+      0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 1;
+      }
+      100% {
+        transform: translate(var(--tx), var(--ty)) scale(0);
+        opacity: 0;
+      }
+    }
+
+    .kinetic-laser {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 45%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+      pointer-events: none;
+      transform: translateX(-150%) skewX(-20deg);
+      z-index: 10;
+    }
+    .contact-cta-pill:hover .kinetic-laser,
+    .explore-pill:hover .kinetic-laser,
+    .card-cta-btn:hover .kinetic-laser,
+    .contact-box-btn:hover .kinetic-laser {
+      animation: kineticSweep 1s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    }
+
+    .ripple-surface {
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
+    }
+    .ripple-effect {
+      position: absolute;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255,255,255,0.65) 0%, rgba(255,255,255,0.1) 70%, transparent 100%);
+      pointer-events: none;
+      animation: tactileRipple 0.65s ease-out forwards;
+      z-index: 20;
+    }
+    html:not(.dark) .ripple-effect {
+      background: radial-gradient(circle, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.08) 70%, transparent 100%);
+    }
+
+    .kinetic-spring {
+      transition: transform 0.35s var(--ease-elastic), box-shadow 0.35s var(--ease-smooth), background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+      will-change: transform;
+    }
+    .kinetic-spring:hover {
+      transform: translateY(-2px) scale(1.035);
+    }
+    .kinetic-spring:active {
+      transform: translateY(1px) scale(0.965);
+      transition-duration: 0.12s;
+    }
+
+    .contact-cta-pill {
+      animation: orbitalPulse 3.5s infinite ease-in-out;
+      position: relative;
+    }
+    html:not(.dark) .contact-cta-pill {
+      animation: orbitalPulseLight 3.5s infinite ease-in-out;
+    }
+
+    .theme-toggle-btn {
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.45s var(--ease-elastic), background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.35s ease;
+    }
+    .theme-toggle-btn:hover {
+      transform: rotate(18deg) scale(1.1);
+      box-shadow: 0 0 18px rgba(255, 255, 255, 0.3);
+    }
+    html:not(.dark) .theme-toggle-btn:hover {
+      box-shadow: 0 0 16px rgba(0, 0, 0, 0.2);
+    }
+    .theme-toggle-btn.is-spinning #theme-toggle-icon {
+      transform: rotate(360deg) scale(1.2);
+      transition: transform 0.65s var(--ease-elastic);
+    }
+
+    .card-cta-btn .cta-icon {
+      transition: transform 0.4s var(--ease-elastic);
+    }
+    .card-cta-btn:hover .cta-icon {
+      transform: scale(1.22) rotate(-12deg);
+    }
+    .card-cta-btn:active .cta-icon {
+      transform: scale(0.9);
+    }
+
+    .explore-pill:hover .explore-arrow {
+      transform: translateY(4px) scale(1.15);
+      color: #ffffff !important;
+      transition: transform 0.4s var(--ease-elastic), color 0.2s ease;
+    }
+
+    .service-card .service-arrow {
+      transition: transform 0.45s var(--ease-elastic), color 0.3s ease;
+    }
+    .service-card:hover .service-arrow {
+      transform: translate(6px, -6px) rotate(-45deg) scale(1.2);
+      color: #ffffff !important;
+    }
+    html:not(.dark) .service-card:hover .service-arrow {
+      color: #000000 !important;
+    }
+
+    .nav-kinetic-link {
+      position: relative;
+    }
+    .nav-kinetic-link::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background: currentColor;
+      border-radius: 9999px;
+      transition: width 0.3s var(--ease-smooth), left 0.3s var(--ease-smooth);
+    }
+    .nav-kinetic-link:hover::after {
+      width: 100%;
+      left: 0;
+    }
+
+    .confetti-dot {
+      position: absolute;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      pointer-events: none;
+      animation: copyConfettiParticle 0.75s var(--ease-smooth) forwards;
+      z-index: 30;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .reveal-item {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+      }
+      .kinetic-spring,
+      .kinetic-spring:hover,
+      .theme-toggle-btn,
+      .theme-toggle-btn:hover,
+      .liquid-glass-hero:hover {
+        transform: none !important;
+      }
+      .kinetic-laser,
+      .contact-cta-pill,
+      .ripple-effect,
+      .confetti-dot,
+      .liquid-glass-shimmer {
+        animation: none !important;
+      }
+      * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+
+    /* ========================================================= */
+    /* BRUTALIST CONTACT MODAL (Pure Deep Black #0a0a0a & White) */
+    /* ========================================================= */
+    #contact-modal {
+      transition: opacity 0.28s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+      visibility: hidden;
+      background-color: rgba(0, 0, 0, 0.84) !important;
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+    #contact-modal.is-open {
+      opacity: 1 !important;
+      visibility: visible !important;
+      pointer-events: auto !important;
+    }
+    #contact-modal #contact-modal-container {
+      background-color: #0c0c0c !important;
+      border: 1px solid rgba(255, 255, 255, 0.12) !important;
+      box-shadow: 0 35px 80px -15px rgba(0, 0, 0, 0.95), 0 0 45px rgba(255, 255, 255, 0.03) !important;
+      transition: transform 0.32s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.32s cubic-bezier(0.16, 1, 0.3, 1);
+      transform: scale(0.96) translateY(12px);
+      opacity: 0;
+    }
+    #contact-modal.is-open #contact-modal-container {
+      transform: scale(1) translateY(0) !important;
+      opacity: 1 !important;
+    }
+
+    /* Modal Service Option Chips (Toggleable Multi-select) */
+    .modal-service-btn {
+      background-color: #141414 !important;
+      border: 1px solid rgba(255, 255, 255, 0.1) !important;
+      color: #d1d1d1 !important;
+      transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .modal-service-btn svg {
+      color: #888888;
+      transition: color 0.2s ease, stroke-width 0.2s ease;
+    }
+    .modal-service-btn:hover {
+      background-color: #1a1a1a !important;
+      border-color: rgba(255, 255, 255, 0.3) !important;
+      color: #ffffff !important;
+    }
+    .modal-service-btn:hover svg {
+      color: #ffffff;
+    }
+
+    /* Active / Selected state: Pure solid white with jet-black text like "Contactanos" pill */
+    .modal-service-btn.active {
+      background-color: #ffffff !important;
+      border-color: #ffffff !important;
+      color: #0a0a0a !important;
+      box-shadow: 0 4px 18px rgba(255, 255, 255, 0.2) !important;
+    }
+    .modal-service-btn.active span {
+      color: #0a0a0a !important;
+      font-weight: 700 !important;
+    }
+    .modal-service-btn.active svg {
+      color: #0a0a0a !important;
+      stroke-width: 2.2px !important;
+    }
+
+    /* Square inputs with rounded corners (strictly rectangular rounded-xl) */
+    #contact-modal input,
+    #contact-modal textarea,
+    html:not(.dark) #contact-modal input,
+    html:not(.dark) #contact-modal textarea {
+      background-color: #141414 !important;
+      border: 1px solid rgba(255, 255, 255, 0.12) !important;
+      color: #ffffff !important;
+      border-radius: 14px !important;
+    }
+    #contact-modal input:focus,
+    #contact-modal textarea:focus,
+    html:not(.dark) #contact-modal input:focus,
+    html:not(.dark) #contact-modal textarea:focus {
+      border-color: #ffffff !important;
+      box-shadow: 0 0 0 1px #ffffff !important;
+      outline: none !important;
+    }
+    #contact-modal input::placeholder,
+    #contact-modal textarea::placeholder {
+      color: #666666 !important;
+    }
+
+    /* Universal Pure Black Theme Isolation: always black in both light and dark mode */
+    #contact-modal h3,
+    html:not(.dark) #contact-modal h3 {
+      color: #ffffff !important;
+    }
+    #contact-modal p,
+    html:not(.dark) #contact-modal p {
+      color: #9a9a9a !important;
+    }
+    #contact-modal label,
+    html:not(.dark) #contact-modal label {
+      color: #d1d1d1 !important;
+    }
+    #contact-modal .modal-eyebrow,
+    html:not(.dark) #contact-modal .modal-eyebrow {
+      background-color: #161616 !important;
+      border-color: rgba(255, 255, 255, 0.12) !important;
+      color: #d1d1d1 !important;
+    }
+    #contact-modal .modal-close-btn,
+    html:not(.dark) #contact-modal .modal-close-btn {
+      color: #888888 !important;
+      background-color: #141414 !important;
+      border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    }
+    #contact-modal .modal-close-btn:hover,
+    html:not(.dark) #contact-modal .modal-close-btn:hover {
+      color: #ffffff !important;
+      background-color: #222222 !important;
+      border-color: rgba(255, 255, 255, 0.3) !important;
+    }
+
+    /* Submit button "Enviar" with kinetic shimmer */
+    #contact-modal .modal-submit-btn,
+    html:not(.dark) #contact-modal .modal-submit-btn {
+      background-color: #ffffff !important;
+      color: #0a0a0a !important;
+      border: 1px solid #ffffff !important;
+    }
+    #contact-modal .modal-submit-btn span,
+    html:not(.dark) #contact-modal .modal-submit-btn span,
+    #contact-modal .modal-submit-btn svg,
+    html:not(.dark) #contact-modal .modal-submit-btn svg {
+      color: #0a0a0a !important;
+    }
+    #contact-modal .modal-submit-btn:hover {
+      background-color: #f2f2f2 !important;
+      box-shadow: 0 10px 30px rgba(255, 255, 255, 0.25) !important;
+    }
+
+    @keyframes fieldShake {
+      0%, 100% { transform: translateX(0); }
+      20%, 60% { transform: translateX(-4px); }
+      40%, 80% { transform: translateX(4px); }
+    }
+    .field-error {
+      border-color: #ef4444 !important;
+      box-shadow: 0 0 0 1px #ef4444 !important;
+      animation: fieldShake 0.35s ease;
+    }
+  </style>
+</head>
+<body class="bg-[#080808] text-on-surface antialiased selection:bg-white selection:text-black min-h-screen flex flex-col font-body-md text-body-md transition-colors duration-300">
+<!-- SHARED COMPONENT: TopNavBar (Frosted Floating Island with Theme Toggle & Logo) -->
+<header class="fixed top-6 left-1/2 -translate-x-1/2 rounded-full z-50 w-[92%] max-w-5xl px-5 py-2.5 flex items-center justify-between mx-auto bg-[#121212]/80 backdrop-blur-md border border-white/10 shadow-2xl transition-all duration-300 hover:border-white/20" id="nav-island">
+<!-- Brand Logo Anchor -->
+<a class="group flex items-center gap-3 text-body-lg font-headline-sm font-bold tracking-tight text-white transition-all duration-200" href="#">
+<img alt="Lemus Studio Isotype" class="w-7 h-7 object-contain rounded-md transition-transform duration-300 group-hover:rotate-6 group-hover:scale-105 border border-white/10 bg-black" src="./assets/logo.jpg" onerror="this.onerror=null;this.src='https://lh3.googleusercontent.com/aida-public/AB6AXuBNSK96enIE5M1ZVH3fQuna-wiFiRJb4aKXJ39A4f_2Qwhs9I8xma3hxyQQWsrjUTYdEhCdoLSAJTDoeNMnMCOQT_4Gvysif8BlngBf4nal_lnTxXuMuP1ko2SgUcqlyoxgVIzMp4YZUgE4WswDNDxRUZ0TBuxw3o4I-_6_7i7zTzPtL1NmsV92N-GWbeySPs5PNB9ZCIJhY8R13w9CWfQSW6jpI4F4dF2JLkq8rfArEoNctQV5JVE6'"/>
+<span class="group-hover:tracking-normal transition-all duration-200">Lemus Studio</span>
+</a>
+<!-- Navigation Links with Kinetic Underline -->
+<nav class="hidden lg:flex items-center gap-7">
+<a class="nav-kinetic-link relative text-label-pill font-label-pill uppercase tracking-wider text-[#9a9a9a] hover:text-white transition-colors duration-200 py-1" href="#servicios">Servicios</a>
+<a class="nav-kinetic-link relative text-label-pill font-label-pill uppercase tracking-wider text-[#9a9a9a] hover:text-white transition-colors duration-200 py-1" href="#trabajos">Trabajos</a>
+<a class="nav-kinetic-link relative text-label-pill font-label-pill uppercase tracking-wider text-[#9a9a9a] hover:text-white transition-colors duration-200 py-1" href="#motion-3d">Motion 3D</a>
+<a class="nav-kinetic-link relative text-label-pill font-label-pill uppercase tracking-wider text-[#9a9a9a] hover:text-white transition-colors duration-200 py-1" href="#proceso">Proceso</a>
+<a class="nav-kinetic-link relative text-label-pill font-label-pill uppercase tracking-wider text-[#9a9a9a] hover:text-white transition-colors duration-200 py-1" href="#filosofia">Filosofía</a>
+<a class="nav-kinetic-link relative text-label-pill font-label-pill uppercase tracking-wider text-[#9a9a9a] hover:text-white transition-colors duration-200 py-1" href="#preguntas">Preguntas</a>
+</nav>
+<!-- Trailing Actions: Theme Switcher & Contact Button with Kinetic Enhancements -->
+<div class="flex items-center gap-3">
+<!-- Interactive Light/Dark Mode Switcher with Orbital 360° Animation -->
+<button aria-label="Cambiar tema claro u oscuro" class="theme-toggle-btn relative w-9 h-9 rounded-full bg-[#1b1b1b] border border-white/15 text-white flex items-center justify-center transition-all duration-300 hover:border-white/40 shadow-sm cursor-pointer" id="theme-toggle" onclick="toggleThemeWithFeedback(this)" title="Alternar tema">
+<span class="material-symbols-outlined text-[19px] transition-transform duration-500 transform rotate-0" id="theme-toggle-icon">light_mode</span>
+</button>
+<!-- Trailing Contact Action with Shimmer Sweep & Ripple -->
+<button type="button" class="contact-cta-pill ripple-surface kinetic-spring text-label-pill font-label-pill uppercase tracking-wider px-5 py-2 rounded-full bg-white text-[#0a0a0a] font-bold shadow-sm hover:shadow-lg flex items-center gap-1.5 cursor-pointer" onclick="openContactModal(event)">
+<span class="kinetic-laser"></span>
+<span class="relative z-10">Contacto</span>
+<span class="material-symbols-outlined text-[14px] font-bold relative z-10 transition-transform duration-300 group-hover:translate-x-0.5">arrow_forward</span>
+</button>
+</div>
+</header>
+<!-- MAIN CANVAS -->
+<main class="flex-1 w-full max-w-5xl mx-auto px-5 md:px-8 pt-36 md:pt-44">
+<!-- 1. HERO SECTION (Logotipo en Liquid Glass de Mayor Tamaño y Jerarquía) -->
+<section class="reveal-item flex flex-col items-center text-center pb-20 md:pb-28">
+<!-- Dominant Liquid Glass Emblem Container for Lemus Studio Isotype -->
+<div class="mb-10 flex items-center justify-center">
+<div class="liquid-glass-hero w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-3xl p-4 sm:p-5 flex items-center justify-center group cursor-pointer" title="Lemus Studio — Kinetic Monolith">
+<div class="liquid-glass-shimmer"></div>
+<img alt="Lemus Studio Isotype" class="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 object-contain transition-transform duration-700 ease-out group-hover:scale-108 group-hover:rotate-2 relative z-10 filter drop-shadow-[0_4px_16px_rgba(255,255,255,0.2)]" src="./assets/logo.jpg" onerror="this.onerror=null;this.src='https://lh3.googleusercontent.com/aida-public/AB6AXuBNSK96enIE5M1ZVH3fQuna-wiFiRJb4aKXJ39A4f_2Qwhs9I8xma3hxyQQWsrjUTYdEhCdoLSAJTDoeNMnMCOQT_4Gvysif8BlngBf4nal_lnTxXuMuP1ko2SgUcqlyoxgVIzMp4YZUgE4WswDNDxRUZ0TBuxw3o4I-_6_7i7zTzPtL1NmsV92N-GWbeySPs5PNB9ZCIJhY8R13w9CWfQSW6jpI4F4dF2JLkq8rfArEoNctQV5JVE6'"/>
+<div class="absolute inset-0 rounded-3xl bg-radial from-white/[0.12] to-transparent pointer-events-none"></div>
+</div>
+</div>
+<!-- Headline -->
+<h1 class="text-headline-lg-mobile md:text-headline-lg font-headline-lg max-w-3xl text-white tracking-tight mb-5">
+  Software &amp; páginas web de alto impacto para marcas audaces
+</h1>
+<!-- Subtitle -->
+<p class="subtext-muted text-body-md md:text-body-lg font-body-lg text-[#9a9a9a] max-w-xl mx-auto mb-10 leading-relaxed">
+  Diseñamos y desarrollamos experiencias digitales a medida desde cero. Código limpio, estética radical y rendimiento implacable para fundadores con visión.
+</p>
+<!-- Pill Indicator Trigger with Kinetic Down Bounce -->
+<a class="explore-pill ripple-surface kinetic-spring group inline-flex items-center gap-2.5 px-6 py-2.5 rounded-full border border-white/15 bg-[#141414] text-label-pill font-label-pill text-white hover:border-white hover:bg-[#1f1f1f] shadow-sm hover:shadow-lg relative overflow-hidden" href="#trabajos" onclick="createRipple(event, this)">
+<span class="kinetic-laser"></span>
+<span class="relative z-10 font-semibold tracking-wide">Explorar trabajos</span>
+<span class="explore-arrow subtext-muted text-[#9a9a9a] text-sm transition-transform duration-300 group-hover:text-white relative z-10">↓</span>
+</a>
+</section>
+<!-- 2. FEATURED SHOWCASE / WORKS SECTION (Preservando todas las imágenes e interfaces en alta resolución) -->
+<section class="space-y-12 md:space-y-16 pb-24 md:pb-32" id="trabajos">
+<div class="reveal-item flex flex-col md:flex-row md:items-end justify-between gap-4 mb-2">
+<div>
+<span class="subtext-muted text-label-pill font-label-pill uppercase text-[#888888] tracking-wider">Proyectos Selectos</span>
+<h2 class="text-headline-md md:text-headline-lg font-headline-lg text-white tracking-tight mt-2">
+      Proyectos diseñados para generar resultados
+    </h2>
+</div>
+<p class="subtext-muted text-body-md font-body-md text-[#9a9a9a] max-w-sm">
+    Plataformas a la medida desarrolladas para automatizar ventas, optimizar procesos y elevar el valor de cada marca.
+  </p>
+</div>
+<!-- Case Study Card 1: E-Commerce Headless -->
+<article class="reveal-item group relative rounded-2xl md:rounded-3xl border border-divider border-white/10 bg-[#141414] overflow-hidden transition-all duration-500 hover:-translate-y-1.5 hover:shadow-2xl hover:border-white/25">
+<div class="grid grid-cols-1 lg:grid-cols-12 min-h-[460px] md:min-h-[500px]">
+<!-- Card Info Side -->
+<div class="lg:col-span-5 p-8 md:p-12 flex flex-col justify-between z-10">
+<div>
+<div class="card-tag-pill inline-block mb-3 px-3 py-1 rounded-full bg-[#1e1e1e] text-label-pill font-label-pill uppercase text-white transition-colors duration-200 group-hover:bg-[#262626] border border-white/5">
+  CATÁLOGO DIGITAL &amp; VENTAS
+</div>
+<h2 class="text-headline-sm md:text-headline-md font-headline-md text-white mb-3">
+  Plataforma Comercial &amp; Catálogo Interactivo
+</h2>
+<p class="subtext-muted text-body-md font-body-md text-[#9a9a9a] mb-6 leading-relaxed">
+  Desarrollo de catálogo de productos de carga ultrarrápida con filtros por categoría, fichas técnicas detalladas y botón de pedido directo a WhatsApp para agilizar el cierre de ventas.
+</p>
+<a class="card-cta-btn ripple-surface kinetic-spring inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white bg-white text-[#0a0a0a] text-label-pill font-label-pill font-bold tracking-wider hover:bg-transparent hover:text-white shadow-sm relative overflow-hidden" href="#contacto" onclick="createRipple(event, this)">
+<span class="kinetic-laser"></span>
+<span class="material-symbols-outlined cta-icon text-[16px] relative z-10">visibility</span>
+<span class="relative z-10">Ver caso de estudio</span>
+</a>
+</div>
+<!-- Metric Callout -->
+<div class="pt-8 border-t border-divider border-white/10 mt-8">
+<p class="subtext-muted text-label-code font-label-code text-[#888888]">
+  +210% en velocidad de carga y respuesta inmediata en móviles.
+</p>
+</div>
+</div>
+<!-- Card Visual Side (Minimalist Mac Dark Aesthetic) -->
+<div class="visual-container-bg lg:col-span-7 relative min-h-[300px] lg:min-h-full bg-[#0d0d0d] overflow-hidden border-t lg:border-t-0 lg:border-l border-divider border-white/10">
+<img alt="Plataforma Comercial &amp; Catálogo Interactivo" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out opacity-90 group-hover:opacity-100" src="./assets/project-1.png"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#141414] via-transparent to-transparent pointer-events-none transition-opacity duration-500 group-hover:opacity-20"></div>
+</div>
+</div>
+</article>
+<!-- Case Study Card 2: Control Panel & Dashboard -->
+<article class="reveal-item group relative rounded-2xl md:rounded-3xl border border-divider border-white/10 bg-[#141414] overflow-hidden transition-all duration-500 hover:-translate-y-1.5 hover:shadow-2xl hover:border-white/25">
+<div class="grid grid-cols-1 lg:grid-cols-12 min-h-[460px] md:min-h-[500px]">
+<!-- Card Info Side -->
+<div class="lg:col-span-5 p-8 md:p-12 flex flex-col justify-between z-10 order-1 lg:order-2">
+<div>
+<div class="card-tag-pill inline-block mb-3 px-3 py-1 rounded-full bg-[#1e1e1e] text-label-pill font-label-pill uppercase text-white transition-colors duration-200 group-hover:bg-[#262626] border border-white/5">
+  GESTIÓN INTERNA &amp; AUTOMATIZACIÓN
+</div>
+<h2 class="text-headline-sm md:text-headline-md font-headline-md text-white mb-3">
+  Panel de Control Financiero &amp; Operativo
+</h2>
+<p class="subtext-muted text-body-md font-body-md text-[#9a9a9a] mb-6 leading-relaxed">
+  Dashboard administrativo personalizado para el seguimiento de ingresos, control de gastos, cálculo de márgenes y monitoreo de proyectos en tiempo real desde un solo lugar.
+</p>
+<a class="card-cta-btn ripple-surface kinetic-spring inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white bg-white text-[#0a0a0a] text-label-pill font-label-pill font-bold tracking-wider hover:bg-transparent hover:text-white shadow-sm relative overflow-hidden" href="#contacto" onclick="createRipple(event, this)">
+<span class="kinetic-laser"></span>
+<span class="material-symbols-outlined cta-icon text-[16px] relative z-10">visibility</span>
+<span class="relative z-10">Ver caso de estudio</span>
+</a>
+</div>
+<!-- Metric Callout -->
+<div class="pt-8 border-t border-divider border-white/10 mt-8">
+<p class="subtext-muted text-label-code font-label-code text-[#888888]">
+  Reducción del 70% en tiempo de gestión operativa y control de caja.
+</p>
+</div>
+</div>
+<!-- Card Visual Side (Minimalist Mac Dark Aesthetic) -->
+<div class="visual-container-bg lg:col-span-7 relative min-h-[300px] lg:min-h-full bg-[#0d0d0d] overflow-hidden order-2 lg:order-1 border-t lg:border-t-0 lg:border-r border-divider border-white/10">
+<img alt="Panel de Control Financiero &amp; Operativo" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out opacity-90 group-hover:opacity-100" src="./assets/project-2.jpg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#141414] via-transparent to-transparent pointer-events-none transition-opacity duration-500 group-hover:opacity-20"></div>
+</div>
+</div>
+</article>
+<!-- Twin Split Cards (Cards 3 & 4) -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-8">
+<!-- Case Study Card 3: Interactive Tool & Quoting Engine -->
+<article class="reveal-item group relative rounded-2xl md:rounded-3xl border border-divider border-white/10 bg-[#141414] overflow-hidden transition-all duration-500 hover:-translate-y-1.5 hover:shadow-2xl hover:border-white/25 flex flex-col justify-between">
+<div class="p-8 md:p-10">
+<div class="card-tag-pill inline-block mb-3 px-3 py-1 rounded-full bg-[#1e1e1e] text-label-pill font-label-pill uppercase text-white transition-colors duration-200 group-hover:bg-[#262626] border border-white/5">
+  HERRAMIENTA INTERACTIVA
+</div>
+<h2 class="text-headline-sm font-headline-sm text-white mb-3">
+  Cotizador en Tiempo Real &amp; Simulador
+</h2>
+<p class="subtext-muted text-body-md font-body-md text-[#9a9a9a] mb-6 leading-relaxed">
+  Calculadora interactiva de cuotas y presupuestos que permite al cliente final personalizar su compra al instante y enviar la propuesta lista para facturar.
+</p>
+<a class="card-cta-btn ripple-surface kinetic-spring inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white bg-white text-[#0a0a0a] text-label-pill font-label-pill font-bold tracking-wider hover:bg-transparent hover:text-white shadow-sm relative overflow-hidden" href="#contacto" onclick="createRipple(event, this)">
+<span class="kinetic-laser"></span>
+<span class="material-symbols-outlined cta-icon text-[16px] relative z-10">visibility</span>
+<span class="relative z-10">Ver caso de estudio</span>
+</a>
+</div>
+<!-- Visual Side (Minimalist Mac Dark Aesthetic) -->
+<div class="visual-container-bg relative h-64 md:h-72 bg-[#0d0d0d] overflow-hidden mt-4 border-t border-b border-divider border-white/10">
+<img alt="Cotizador en Tiempo Real &amp; Simulador" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out opacity-90 group-hover:opacity-100" src="./assets/project-3.jpg"/>
+</div>
+<div class="p-6 md:p-8 pt-4 border-t border-divider border-white/10">
+<p class="subtext-muted text-label-code font-label-code text-[#888888]">
+  Aumento en prospectos calificados con intención de compra real.
+</p>
+</div>
+</article>
+<!-- Case Study Card 4: Inventory & Logistics System -->
+<article class="reveal-item group relative rounded-2xl md:rounded-3xl border border-divider border-white/10 bg-[#141414] overflow-hidden transition-all duration-500 hover:-translate-y-1.5 hover:shadow-2xl hover:border-white/25 flex flex-col justify-between">
+<div class="p-8 md:p-10">
+<div class="card-tag-pill inline-block mb-3 px-3 py-1 rounded-full bg-[#1e1e1e] text-label-pill font-label-pill uppercase text-white transition-colors duration-200 group-hover:bg-[#262626] border border-white/5">
+  PLATAFORMA INMOBILIARIA
+</div>
+<h2 class="text-headline-sm font-headline-sm text-white mb-3">
+  Portal de Propiedades &amp; Gestión de Leads
+</h2>
+<p class="subtext-muted text-body-md font-body-md text-[#9a9a9a] mb-6 leading-relaxed">
+  Sitio web para exhibición de inmuebles con filtros por zona, precio y metraje, galerías optimizadas y enlace directo de asesoría personalizada.
+</p>
+<a class="card-cta-btn ripple-surface kinetic-spring inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white bg-white text-[#0a0a0a] text-label-pill font-label-pill font-bold tracking-wider hover:bg-transparent hover:text-white shadow-sm relative overflow-hidden" href="#contacto" onclick="createRipple(event, this)">
+<span class="kinetic-laser"></span>
+<span class="material-symbols-outlined cta-icon text-[16px] relative z-10">visibility</span>
+<span class="relative z-10">Ver caso de estudio</span>
+</a>
+</div>
+<!-- Visual Side (Minimalist Mac Dark Aesthetic) -->
+<div class="visual-container-bg relative h-64 md:h-72 bg-[#0d0d0d] overflow-hidden mt-4 border-t border-b border-divider border-white/10">
+<img alt="Portal de Propiedades &amp; Gestión de Leads" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out opacity-90 group-hover:opacity-100" src="./assets/project-4.jpg"/>
+</div>
+<div class="p-6 md:p-8 pt-4 border-t border-divider border-white/10">
+<p class="subtext-muted text-label-code font-label-code text-[#888888]">
+  Organización completa del inventario y contacto directo con compradores.
+</p>
+</div>
+</article>
+</div>
+</section>
+<!-- 3. GRÁFICO DE MOTION GRAPHICS EN 3D ÉPICO (<threejs-scene> oficial) -->
+<section class="reveal-item pb-24 md:pb-32" id="motion-3d">
+<div class="motion-card relative rounded-2xl md:rounded-3xl border border-divider border-white/10 bg-[#141414] overflow-hidden transition-all duration-500 hover:border-white/25 shadow-2xl">
+<div class="grid grid-cols-1 lg:grid-cols-12 min-h-[500px]">
+<!-- Info Side -->
+<div class="lg:col-span-5 p-8 md:p-12 flex flex-col justify-between z-10">
+<div>
+<div class="card-tag-pill inline-block mb-3 px-3 py-1 rounded-full bg-[#1e1e1e] text-label-pill font-label-pill uppercase text-white transition-colors duration-200 border border-white/5">
+      EXPERIENCIA VISUAL &amp; 3D
+    </div>
+<h2 class="text-headline-sm md:text-headline-md font-headline-md text-white mb-3">
+      Experiencias Interactivas &amp; Modelos 3D
+    </h2>
+<p class="subtext-muted text-body-md font-body-md text-[#9a9a9a] mb-6 leading-relaxed">
+      Elevamos la presentación de tus productos con elementos interactivos y recorridos visuales en tiempo real. Diseños fluidos y modernos que capturan la atención de tus clientes y aumentan el tiempo que pasan en tu sitio.
+    </p>
+<button type="button" class="card-cta-btn ripple-surface kinetic-spring inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white bg-white text-[#0a0a0a] text-label-pill font-label-pill font-bold tracking-wider hover:bg-transparent hover:text-white shadow-sm relative overflow-hidden cursor-pointer" onclick="openContactModal(event)">
+<span class="kinetic-laser"></span>
+<span class="material-symbols-outlined cta-icon text-[16px] relative z-10">view_in_ar</span>
+<span class="relative z-10">Contáctanos</span>
+</button>
+</div>
+<!-- Technical Telemetry Footer -->
+<div class="pt-8 border-t border-divider border-white/10 mt-8 space-y-1">
+<div class="flex items-center justify-between text-label-code font-label-code text-[#888888] text-xs">
+<span>TECNOLOGÍA</span>
+<span class="hud-text-bright text-white font-semibold">Interacción Fluida</span>
+</div>
+<div class="flex items-center justify-between text-label-code font-label-code text-[#888888] text-xs">
+<span>RENDIMIENTO</span>
+<span class="hud-text-bright text-white font-semibold">Optimizado para Móvil</span>
+</div>
+</div>
+</div>
+<!-- 3D Interactive Canvas Container with HUD telemetry -->
+<div class="visual-container-bg lg:col-span-7 relative min-h-[460px] md:min-h-[520px] bg-[#090909] overflow-hidden border-t lg:border-t-0 lg:border-l border-divider border-white/10 flex flex-col justify-between p-4 md:p-6">
+<!-- HUD Header Top -->
+<div class="flex items-center justify-between z-10 mb-2">
+<span class="text-label-code font-label-code text-[#888888] text-xs">RENDER CORE // HARDWARE ACCELERATED</span>
+<span class="hud-badge text-label-pill font-label-pill uppercase px-2.5 py-1 rounded bg-white/10 text-white text-[10px] flex items-center gap-1.5 border border-white/10">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+VISTA INTERACTIVA EN TIEMPO REAL
+</span>
+</div>
+<!-- Official ThreeJS Scene Tag with Interactive Script -->
+<div class="w-full flex-1 flex items-center justify-center relative overflow-hidden">
+<!-- STITCH_THREEJS_START:ANIMATION_22 class="w-full h-[460px] md:h-[520px] rounded-2xl bg-transparent" -->
+<div class="w-full h-[460px] md:h-[520px] rounded-2xl bg-transparent" style="display:block;">
+<script src="https://ajax.googleapis.com/ajax/libs/threejs/r125/three.min.js"></script>
+<div id="threejs-container-ANIMATION_22" style="width:100%;height:100%"></div>
+<script>
+(function() {
+  const container = document.getElementById('threejs-container-ANIMATION_22');
+  const devicePixelRatio = window.devicePixelRatio || 1;
+  const width = container.clientWidth || 600;
+const height = container.clientHeight || 400;
+
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 1000);
+camera.position.set(0, 0, 18);
+
+const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+renderer.setSize(width, height);
+renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+container.appendChild(renderer.domElement);
+
+// Lighting
+const ambientLight = new THREE.AmbientLight(0xffffff, 0.9);
+scene.add(ambientLight);
+
+const dirLight1 = new THREE.DirectionalLight(0xffffff, 1.5);
+dirLight1.position.set(10, 15, 10);
+scene.add(dirLight1);
+
+const dirLight2 = new THREE.DirectionalLight(0x888888, 1.0);
+dirLight2.position.set(-10, -10, -10);
+scene.add(dirLight2);
+
+// Central Interactive Geometric 3D Rig (Monolith / Kinetic Core inspired by Lemus Studio Isotype)
+const group = new THREE.Group();
+scene.add(group);
+
+// 1. Outer Wireframe Octahedron / Polyhedral Cage
+const outerGeo = new THREE.OctahedronGeometry(6.2, 1);
+const outerMat = new THREE.MeshBasicMaterial({
+  color: 0xffffff,
+  wireframe: true,
+  transparent: true,
+  opacity: 0.18
+});
+const outerMesh = new THREE.Mesh(outerGeo, outerMat);
+group.add(outerMesh);
+
+// 2. Middle Rotating Ring / Torus HUD
+const torusGeo = new THREE.TorusGeometry(5.0, 0.04, 16, 100);
+const torusMat = new THREE.MeshBasicMaterial({
+  color: 0xffffff,
+  transparent: true,
+  opacity: 0.4
+});
+const torusMesh = new THREE.Mesh(torusGeo, torusMat);
+group.add(torusMesh);
+
+const torusGeo2 = new THREE.TorusGeometry(4.2, 0.03, 16, 100);
+const torusMesh2 = new THREE.Mesh(torusGeo2, torusMat);
+torusMesh2.rotation.x = Math.PI / 2;
+group.add(torusMesh2);
+
+// 3. Central Monolith Cube (Sharp, Architectural Lemus Isotype Box)
+const boxGeo = new THREE.BoxGeometry(3.2, 3.2, 3.2);
+const boxMat = new THREE.MeshPhongMaterial({
+  color: 0x111111,
+  emissive: 0x222222,
+  specular: 0xffffff,
+  shininess: 90,
+  wireframe: false,
+  transparent: true,
+  opacity: 0.9
+});
+const boxMesh = new THREE.Mesh(boxGeo, boxMat);
+group.add(boxMesh);
+
+// Crisp White Box Edges for Brutalist Definition
+const edgesGeo = new THREE.EdgesGeometry(boxGeo);
+const edgesMat = new THREE.LineBasicMaterial({ color: 0xffffff, linewidth: 2 });
+const wireframeEdges = new THREE.LineSegments(edgesGeo, edgesMat);
+boxMesh.add(wireframeEdges);
+
+// 4. Inner Diagonal Floating Kinetic Beam (Lemus diagonal slash)
+const slashGeo = new THREE.BoxGeometry(0.35, 3.6, 0.35);
+const slashMat = new THREE.MeshBasicMaterial({ color: 0xffffff });
+const slashMesh = new THREE.Mesh(slashGeo, slashMat);
+slashMesh.rotation.z = Math.PI / 4;
+slashMesh.rotation.y = Math.PI / 4;
+group.add(slashMesh);
+
+// 5. Orbiting Quantum Nodes
+const nodeGeo = new THREE.SphereGeometry(0.18, 16, 16);
+const nodeMat = new THREE.MeshBasicMaterial({ color: 0xffffff });
+const nodes = [];
+const nodeCount = 8;
+for (let i = 0; i < nodeCount; i++) {
+  const node = new THREE.Mesh(nodeGeo, nodeMat);
+  group.add(node);
+  nodes.push({
+    mesh: node,
+    speed: 0.8 + i * 0.2,
+    radius: 4.8 + (i % 2) * 1.4,
+    angle: (i / nodeCount) * Math.PI * 2,
+    tilt: (i % 3) * 0.4
+  });
+}
+
+// Mouse interaction
+let mouseX = 0;
+let mouseY = 0;
+let targetX = 0;
+let targetY = 0;
+
+function onMouseMove(event) {
+  const rect = container.getBoundingClientRect();
+  mouseX = ((event.clientX - rect.left) / rect.width) * 2 - 1;
+  mouseY = -(((event.clientY - rect.top) / rect.height) * 2 - 1);
+}
+window.addEventListener('mousemove', onMouseMove);
+
+// Animation Loop
+let clock = new THREE.Clock();
+
+function animate() {
+  requestAnimationFrame(animate);
+  const elapsedTime = clock.getElapsedTime();
+
+  targetX = mouseX * 0.8;
+  targetY = mouseY * 0.6;
+
+  group.rotation.y += (targetX - group.rotation.y) * 0.05 + 0.005;
+  group.rotation.x += (-targetY - group.rotation.x) * 0.05 + 0.003;
+
+  outerMesh.rotation.y = -elapsedTime * 0.15;
+  outerMesh.rotation.z = elapsedTime * 0.08;
+
+  torusMesh.rotation.z = elapsedTime * 0.25;
+  torusMesh2.rotation.y = elapsedTime * 0.3;
+
+  slashMesh.rotation.x = Math.sin(elapsedTime * 1.5) * 0.3;
+
+  nodes.forEach((n, idx) => {
+    const curAngle = n.angle + elapsedTime * n.speed;
+    n.mesh.position.x = Math.cos(curAngle) * n.radius;
+    n.mesh.position.z = Math.sin(curAngle) * n.radius;
+    n.mesh.position.y = Math.sin(curAngle * 2 + n.tilt) * 1.5;
+  });
+
+  renderer.render(scene, camera);
+}
+
+  // Theme sync for 3D elements in both dark and light mode
+  function syncThreeTheme() {
+    const isDark = document.documentElement.classList.contains('dark');
+    if (isDark) {
+      outerMat.color.setHex(0xffffff);
+      outerMat.opacity = 0.18;
+      torusMat.color.setHex(0xffffff);
+      torusMat.opacity = 0.4;
+      boxMat.color.setHex(0x111111);
+      boxMat.emissive.setHex(0x222222);
+      boxMat.specular.setHex(0xffffff);
+      boxMat.opacity = 0.9;
+      edgesMat.color.setHex(0xffffff);
+      slashMat.color.setHex(0xffffff);
+      nodeMat.color.setHex(0xffffff);
+      ambientLight.color.setHex(0xffffff);
+      ambientLight.intensity = 0.9;
+      dirLight1.intensity = 1.5;
+      dirLight2.intensity = 1.0;
+    } else {
+      // Light Mode: High-contrast architectural minimalist styling
+      outerMat.color.setHex(0x18181b);
+      outerMat.opacity = 0.22;
+      torusMat.color.setHex(0x18181b);
+      torusMat.opacity = 0.45;
+      boxMat.color.setHex(0x1c1c20);
+      boxMat.emissive.setHex(0x27272a);
+      boxMat.specular.setHex(0x888888);
+      boxMat.opacity = 0.95;
+      edgesMat.color.setHex(0x09090b);
+      slashMat.color.setHex(0x09090b);
+      nodeMat.color.setHex(0x09090b);
+      ambientLight.color.setHex(0xffffff);
+      ambientLight.intensity = 1.2;
+      dirLight1.intensity = 1.8;
+      dirLight2.intensity = 1.2;
+    }
+  }
+  syncThreeTheme();
+  window.syncLemusThreeTheme = syncThreeTheme;
+
+  if (window.MutationObserver) {
+    const observer = new MutationObserver(syncThreeTheme);
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
+  }
+
+animate();
+
+function handleResize() {
+  const w = container.clientWidth || 600;
+  const h = container.clientHeight || 400;
+  camera.aspect = w / h;
+  camera.updateProjectionMatrix();
+  renderer.setSize(w, h);
+}
+window.addEventListener('resize', handleResize);
+
+})();
+</script>
+</div>
+<!-- STITCH_THREEJS_END:ANIMATION_22 -->
+</div>
+<!-- HUD Footer Bottom -->
+<div class="flex flex-wrap items-center justify-between text-label-code font-label-code text-[#888888] text-[11px] z-10 pt-3 border-t border-divider border-white/10 gap-2">
+<span>INTERACCIÓN FLUIDA</span>
+<span>MÓVIL Y ESCRITORIO</span>
+<span>CARGA INSTANTÁNEA</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. SECCIÓN DE PROCESO DE TRABAJO (01 Discovery, 02 Diseño Figma, 03 Código Limpio, 04 Lanzamiento 100/100) -->
+<section class="pt-8 pb-24 md:pb-32 border-t border-divider border-white/10" id="proceso">
+<div class="reveal-item flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+<div>
+<span class="subtext-muted text-label-pill font-label-pill uppercase text-[#888888] tracking-wider">Metodología de Estudio</span>
+<h2 class="text-headline-md md:text-headline-lg font-headline-lg text-white tracking-tight mt-2">
+      De la idea a una máquina de ventas en 4 pasos
+    </h2>
+</div>
+<p class="subtext-muted text-body-md font-body-md text-[#9a9a9a] max-w-sm">
+    Un proceso estructurado en 4 fases rigurosas sin burocracia innecesaria. Cada sprint genera artefactos tangibles y funcionales.
+  </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Step 01 -->
+<div class="process-card reveal-item p-8 rounded-2xl border border-divider border-white/10 bg-[#141414] hover:border-white/30 transition-all duration-300 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-6">
+<span class="text-label-code font-label-code text-white font-bold text-lg">01</span>
+<span class="material-symbols-outlined text-[#888888]">psychology</span>
+</div>
+<h3 class="text-headline-sm font-headline-sm text-white mb-3 text-xl">Diagnóstico &amp; Estrategia</h3>
+<p class="subtext-muted text-body-sm font-body-sm text-[#9a9a9a] leading-relaxed">
+        Analizamos cómo opera tu negocio hoy y definimos el sistema exacto para automatizar tus ventas.
+      </p>
+</div>
+<div class="mt-8 pt-4 border-t border-divider border-white/10 text-label-code font-label-code text-[#777777] text-xs">
+      Entregable: Plan &amp; Estrategia Comercial
+    </div>
+</div>
+<!-- Step 02 -->
+<div class="process-card reveal-item delay-100 p-8 rounded-2xl border border-divider border-white/10 bg-[#141414] hover:border-white/30 transition-all duration-300 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-6">
+<span class="text-label-code font-label-code text-white font-bold text-lg">02</span>
+<span class="material-symbols-outlined text-[#888888]">palette</span>
+</div>
+<h3 class="text-headline-sm font-headline-sm text-white mb-3 text-xl">Diseño de Alto Impacto</h3>
+<p class="subtext-muted text-body-sm font-body-sm text-[#9a9a9a] leading-relaxed">
+        Creamos una interfaz moderna, limpia y pensada 100% para celulares.
+      </p>
+</div>
+<div class="mt-8 pt-4 border-t border-divider border-white/10 text-label-code font-label-code text-[#777777] text-xs">
+      Entregable: Prototipo Móvil &amp; UI Final
+    </div>
+</div>
+<!-- Step 03 -->
+<div class="process-card reveal-item delay-200 p-8 rounded-2xl border border-divider border-white/10 bg-[#141414] hover:border-white/30 transition-all duration-300 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-6">
+<span class="text-label-code font-label-code text-white font-bold text-lg">03</span>
+<span class="material-symbols-outlined text-[#888888]">code</span>
+</div>
+<h3 class="text-headline-sm font-headline-sm text-white mb-3 text-xl">Desarrollo &amp; Automatización</h3>
+<p class="subtext-muted text-body-sm font-body-sm text-[#9a9a9a] leading-relaxed">
+        Programamos tu plataforma desde cero con botones directos a WhatsApp listos para convertir.
+      </p>
+</div>
+<div class="mt-8 pt-4 border-t border-divider border-white/10 text-label-code font-label-code text-[#777777] text-xs">
+      Entregable: Plataforma &amp; Conexión WhatsApp
+    </div>
+</div>
+<!-- Step 04 -->
+<div class="process-card reveal-item delay-300 p-8 rounded-2xl border border-divider border-white/10 bg-[#141414] hover:border-white/30 transition-all duration-300 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-6">
+<span class="text-label-code font-label-code text-white font-bold text-lg">04</span>
+<span class="material-symbols-outlined text-[#888888]">speed</span>
+</div>
+<h3 class="text-headline-sm font-headline-sm text-white mb-3 text-xl">Lanzamiento &amp; Crecimiento</h3>
+<p class="subtext-muted text-body-sm font-body-sm text-[#9a9a9a] leading-relaxed">
+        Optimizamos la velocidad al máximo y dejamos tu web lista para generar ventas 24/7.
+      </p>
+</div>
+<div class="mt-8 pt-4 border-t border-divider border-white/10 text-label-code font-label-code text-[#777777] text-xs">
+      Entregable: Web 100% Lista &amp; En Vivo
+    </div>
+</div>
+</div>
+</section>
+<!-- 5. SERVICES / CAPABILITIES SECTION (Expanded to 6 capabilities) -->
+<section class="pt-8 pb-24 md:pb-32 border-t border-divider border-white/10" id="servicios">
+<div class="reveal-item flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+<div>
+<span class="subtext-muted text-label-pill font-label-pill uppercase text-[#888888] tracking-wider">Capacidades</span>
+<h2 class="text-headline-md md:text-headline-lg font-headline-lg text-white tracking-tight mt-2">
+  Soluciones digitales para escalar tu negocio
+</h2>
+</div>
+<p class="subtext-muted text-body-md font-body-md text-[#9a9a9a] max-w-sm">
+  No usamos constructores visuales ni plantillas prefabricadas. Cada línea de código está optimizada para velocidad extrema y escala.
+</p>
+</div>
+<!-- Bento-style Service Matrix (6 items) with Kinetic Hover Sling -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Service 01 -->
+<div class="service-card reveal-item p-8 rounded-2xl border border-divider border-white/10 bg-[#141414] hover:border-white/40 hover:-translate-y-1.5 hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group cursor-default">
+<div>
+<div class="flex items-center justify-between mb-6">
+<span class="subtext-muted text-label-code font-label-code text-[#888888] font-semibold">01 / WEB</span>
+<span class="service-arrow material-symbols-outlined text-white/70">arrow_forward</span>
+</div>
+<h3 class="text-headline-sm font-headline-sm text-white mb-3">
+  Sitios Web de Alta Conversión
+</h3>
+<p class="subtext-muted text-body-md font-body-md text-[#9a9a9a] leading-relaxed">
+  Páginas corporativas y landing pages diseñadas para convertir visitas en clientes potenciales. Carga instantánea, diseño adaptado 100% a celulares y optimizadas para Google.
+</p>
+</div>
+<div class="mt-8 pt-6 border-t border-divider border-white/10 flex flex-wrap gap-2">
+<span class="card-tag-pill px-2.5 py-1 rounded bg-[#1e1e1e] text-label-code font-label-code text-[#d1d1d1] transition-colors duration-200 group-hover:bg-[#282828] border border-white/5">Next.js</span>
+<span class="card-tag-pill px-2.5 py-1 rounded bg-[#1e1e1e] text-label-code font-label-code text-[#d1d1d1] transition-colors duration-200 group-hover:bg-[#282828] border border-white/5">Tailwind CSS</span>
+<span class="card-tag-pill px-2.5 py-1 rounded bg-[#1e1e1e] text-label-code font-label-code text-[#d1d1d1] transition-colors duration-200 group-hover:bg-[#282828] border border-white/5">SEO Local</span>
+</div>
+</div>
+<!-- Service 02 -->
+<div class="service-card reveal-item delay-100 p-8 rounded-2xl border border-divider border-white/10 bg-[#141414] hover:border-white/40 hover:-translate-y-1.5 hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group cursor-default">
+<div>
+<div class="flex items-center justify-between mb-6">
+<span class="subtext-muted text-label-code font-label-code text-[#888888] font-semibold">02 / SISTEMAS</span>
+<span class="service-arrow material-symbols-outlined text-white/70">arrow_forward</span>
+</div>
+<h3 class="text-headline-sm font-headline-sm text-white mb-3">
+  Paneles de Control &amp; Dashboards
+</h3>
+<p class="subtext-muted text-body-md font-body-md text-[#9a9a9a] leading-relaxed">
+  Plataformas internas a la medida para gestionar tus ventas, inventarios o clientes. Automatiza tareas repetitivas y visualiza tus métricas clave en un solo lugar.
+</p>
+</div>
+<div class="mt-8 pt-6 border-t border-divider border-white/10 flex flex-wrap gap-2">
+<span class="card-tag-pill px-2.5 py-1 rounded bg-[#1e1e1e] text-label-code font-label-code text-[#d1d1d1] transition-colors duration-200 group-hover:bg-[#282828] border border-white/5">React</span>
+<span class="card-tag-pill px-2.5 py-1 rounded bg-[#1e1e1e] text-label-code font-label-code text-[#d1d1d1] transition-colors duration-200 group-hover:bg-[#282828] border border-white/5">Dashboards</span>
+<span class="card-tag-pill px-2.5 py-1 rounded bg-[#1e1e1e] text-label-code font-label-code text-[#d1d1d1] transition-colors duration-200 group-hover:bg-[#282828] border border-white/5">Automatización</span>
+</div>
+</div>
+<!-- Service 03 -->
+<div class="service-card reveal-item delay-200 p-8 rounded-2xl border border-divider border-white/10 bg-[#141414] hover:border-white/40 hover:-translate-y-1.5 hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group cursor-default">
+<div>
+<div class="flex items-center justify-between mb-6">
+<span class="subtext-muted text-label-code font-label-code text-[#888888] font-semibold">03 / VENTAS</span>
+<span class="service-arrow material-symbols-outlined text-white/70">arrow_forward</span>
+</div>
+<h3 class="text-headline-sm font-headline-sm text-white mb-3">
+  Catálogos Digitales &amp; E-Commerce
+</h3>
+<p class="subtext-muted text-body-md font-body-md text-[#9a9a9a] leading-relaxed">
+  Muestra tus productos o propiedades con filtros rápidos, cálculo de cuotas y botones automáticos directos a WhatsApp o pasarelas de pago locales.
+</p>
+</div>
+<div class="mt-8 pt-6 border-t border-divider border-white/10 flex flex-wrap gap-2">
+<span class="card-tag-pill px-2.5 py-1 rounded bg-[#1e1e1e] text-label-code font-label-code text-[#d1d1d1] transition-colors duration-200 group-hover:bg-[#282828] border border-white/5">Catálogo Online</span>
+<span class="card-tag-pill px-2.5 py-1 rounded bg-[#1e1e1e] text-label-code font-label-code text-[#d1d1d1] transition-colors duration-200 group-hover:bg-[#282828] border border-white/5">Visacuotas</span>
+<span class="card-tag-pill px-2.5 py-1 rounded bg-[#1e1e1e] text-label-code font-label-code text-[#d1d1d1] transition-colors duration-200 group-hover:bg-[#282828] border border-white/5">WhatsApp Sales</span>
+</div>
+</div>
+<!-- Service 04 -->
+<div class="service-card reveal-item delay-100 p-8 rounded-2xl border border-divider border-white/10 bg-[#141414] hover:border-white/40 hover:-translate-y-1.5 hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group cursor-default">
+<div>
+<div class="flex items-center justify-between mb-6">
+<span class="subtext-muted text-label-code font-label-code text-[#888888] font-semibold">04 / BRANDING</span>
+<span class="service-arrow material-symbols-outlined text-white/70">arrow_forward</span>
+</div>
+<h3 class="text-headline-sm font-headline-sm text-white mb-3">
+  Diseño UI/UX &amp; Prototipado
+</h3>
+<p class="subtext-muted text-body-md font-body-md text-[#9a9a9a] leading-relaxed">
+  Interfaces modernas, limpias y profesionales que transmiten autoridad y confianza desde el primer segundo. Diseños pensados para facilitar la compra del usuario.
+</p>
+</div>
+<div class="mt-8 pt-6 border-t border-divider border-white/10 flex flex-wrap gap-2">
+<span class="card-tag-pill px-2.5 py-1 rounded bg-[#1e1e1e] text-label-code font-label-code text-[#d1d1d1] transition-colors duration-200 group-hover:bg-[#282828] border border-white/5">Figma</span>
+<span class="card-tag-pill px-2.5 py-1 rounded bg-[#1e1e1e] text-label-code font-label-code text-[#d1d1d1] transition-colors duration-200 group-hover:bg-[#282828] border border-white/5">UI/UX</span>
+<span class="card-tag-pill px-2.5 py-1 rounded bg-[#1e1e1e] text-label-code font-label-code text-[#d1d1d1] transition-colors duration-200 group-hover:bg-[#282828] border border-white/5">Mobile First</span>
+</div>
+</div>
+<!-- Service 05 -->
+<div class="service-card reveal-item delay-200 p-8 rounded-2xl border border-divider border-white/10 bg-[#141414] hover:border-white/40 hover:-translate-y-1.5 hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group cursor-default">
+<div>
+<div class="flex items-center justify-between mb-6">
+<span class="subtext-muted text-label-code font-label-code text-[#888888] font-semibold">05 / INTERACCIÓN</span>
+<span class="service-arrow material-symbols-outlined text-white/70">arrow_forward</span>
+</div>
+<h3 class="text-headline-sm font-headline-sm text-white mb-3">
+  Herramientas Interactivas
+</h3>
+<p class="subtext-muted text-body-md font-body-md text-[#9a9a9a] leading-relaxed">
+  Calculadoras de financiamiento, cotizadores en tiempo real y formularios dinámicos que cierran ventas automáticamente antes de que el cliente pregunte.
+</p>
+</div>
+<div class="mt-8 pt-6 border-t border-divider border-white/10 flex flex-wrap gap-2">
+<span class="card-tag-pill px-2.5 py-1 rounded bg-[#1e1e1e] text-label-code font-label-code text-[#d1d1d1] transition-colors duration-200 group-hover:bg-[#282828] border border-white/5">Simuladores</span>
+<span class="card-tag-pill px-2.5 py-1 rounded bg-[#1e1e1e] text-label-code font-label-code text-[#d1d1d1] transition-colors duration-200 group-hover:bg-[#282828] border border-white/5">Cotizadores</span>
+<span class="card-tag-pill px-2.5 py-1 rounded bg-[#1e1e1e] text-label-code font-label-code text-[#d1d1d1] transition-colors duration-200 group-hover:bg-[#282828] border border-white/5">Micro-interacciones</span>
+</div>
+</div>
+<!-- Service 06 -->
+<div class="service-card reveal-item delay-300 p-8 rounded-2xl border border-divider border-white/10 bg-[#141414] hover:border-white/40 hover:-translate-y-1.5 hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group cursor-default">
+<div>
+<div class="flex items-center justify-between mb-6">
+<span class="subtext-muted text-label-code font-label-code text-[#888888] font-semibold">06 / RENDIMIENTO</span>
+<span class="service-arrow material-symbols-outlined text-white/70">arrow_forward</span>
+</div>
+<h3 class="text-headline-sm font-headline-sm text-white mb-3">
+  Optimización &amp; Velocidad
+</h3>
+<p class="subtext-muted text-body-md font-body-md text-[#9a9a9a] leading-relaxed">
+  Auditoría técnica para acelerar páginas lentas, configuración de dominios, correos corporativos y estructura técnica para rankear en los primeros lugares de búsqueda.
+</p>
+</div>
+<div class="mt-8 pt-6 border-t border-divider border-white/10 flex flex-wrap gap-2">
+<span class="card-tag-pill px-2.5 py-1 rounded bg-[#1e1e1e] text-label-code font-label-code text-[#d1d1d1] transition-colors duration-200 group-hover:bg-[#282828] border border-white/5">Velocidad Móvil</span>
+<span class="card-tag-pill px-2.5 py-1 rounded bg-[#1e1e1e] text-label-code font-label-code text-[#d1d1d1] transition-colors duration-200 group-hover:bg-[#282828] border border-white/5">Google SEO</span>
+<span class="card-tag-pill px-2.5 py-1 rounded bg-[#1e1e1e] text-label-code font-label-code text-[#d1d1d1] transition-colors duration-200 group-hover:bg-[#282828] border border-white/5">Dominio &amp; Hosting</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. PHILOSOPHY / INTUICIÓN, OFICIO Y CÓDIGO -->
+<section class="reveal-item pt-12 pb-24 md:pb-32 border-t border-divider border-white/10" id="filosofia">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+<div class="lg:col-span-5">
+<span class="subtext-muted text-label-pill font-label-pill uppercase text-[#888888] tracking-wider">Manifiesto Lemus</span>
+<h2 class="text-headline-md md:text-headline-lg font-headline-lg text-white tracking-tight mt-2 mb-6">
+  Calidad que se nota, tecnología que funciona
+</h2>
+<div class="quote-card p-6 rounded-2xl bg-[#141414] border border-divider border-white/10 hover:border-white/30 transition-colors duration-300">
+<p class="text-body-md font-body-md text-[#d1d1d1] leading-relaxed italic">
+  "Un buen diseño atrae miradas, pero una página rápida y fácil de usar es lo que realmente cierra ventas. Hacemos que tu marca transmita confianza y venda en automático."
+</p>
+<div class="mt-4 flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-white text-[#0a0a0a] flex items-center justify-center font-bold text-xs transition-transform duration-300 hover:scale-110 shadow-sm overflow-hidden">
+<img alt="Lemus Studio" class="w-full h-full object-cover" src="./assets/logo.jpg" onerror="this.onerror=null;this.src='https://lh3.googleusercontent.com/aida-public/AB6AXuBNSK96enIE5M1ZVH3fQuna-wiFiRJb4aKXJ39A4f_2Qwhs9I8xma3hxyQQWsrjUTYdEhCdoLSAJTDoeNMnMCOQT_4Gvysif8BlngBf4nal_lnTxXuMuP1ko2SgUcqlyoxgVIzMp4YZUgE4WswDNDxRUZ0TBuxw3o4I-_6_7i7zTzPtL1NmsV92N-GWbeySPs5PNB9ZCIJhY8R13w9CWfQSW6jpI4F4dF2JLkq8rfArEoNctQV5JVE6'"/>
+</div>
+<div>
+<p class="text-label-pill font-label-pill font-bold text-white">Lemus Studio</p>
+<p class="subtext-muted text-label-code font-label-code text-[#888888] text-xs">Diseño web moderno &amp; soluciones digitales</p>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-7 space-y-6 text-[#9a9a9a] subtext-muted font-body-md text-body-md leading-relaxed">
+<p class="text-white font-headline-sm font-semibold text-lg">
+  En un mercado lleno de páginas lentas y plantillas repetidas, nosotros construimos plataformas sólidas, rápidas y diseñadas específicamente para que tu negocio venda más, sin que tú tengas que preocuparte por complicaciones técnicas.
+</p>
+<p>
+  Sabemos que una página lenta o difícil de ver en celular hace que pierdas clientes todos los días. Por eso nos enfocamos en que tu sitio cargue al instante, se vea impecable en cualquier pantalla y tenga botones automáticos directos a WhatsApp para facilitar el cierre de cada venta.
+</p>
+<p>
+  No te enredamos con tecnicismos innecesarios ni procesos eternos. Te acompañamos paso a paso con comunicación clara y transparente para que tengas una herramienta digital moderna que trabaje para tu empresa las 24 horas del día.
+</p>
+<div class="grid grid-cols-3 gap-4 pt-6 border-t border-divider border-white/10">
+<div class="group">
+<p class="text-headline-sm font-headline-sm text-white group-hover:scale-105 transition-transform duration-200 origin-left">100%</p>
+<p class="subtext-muted text-label-code font-label-code text-[#888888]">A tu medida</p>
+</div>
+<div class="group">
+<p class="text-headline-sm font-headline-sm text-white group-hover:scale-105 transition-transform duration-200 origin-left">&lt;1s</p>
+<p class="subtext-muted text-label-code font-label-code text-[#888888]">Carga instantánea</p>
+</div>
+<div class="group">
+<p class="text-headline-sm font-headline-sm text-white group-hover:scale-105 transition-transform duration-200 origin-left">24/7</p>
+<p class="subtext-muted text-label-code font-label-code text-[#888888]">Listo para vender</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 7. SECCIÓN DE TESTIMONIOS Y SELLO DE CONFIANZA -->
+<section class="reveal-item pt-8 pb-24 md:pb-32 border-t border-divider border-white/10" id="testimonios">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+<div>
+<span class="subtext-muted text-label-pill font-label-pill uppercase text-[#888888] tracking-wider">VOCES DE CLIENTES</span>
+<h2 class="text-headline-md md:text-headline-lg font-headline-lg text-white tracking-tight mt-2">
+      La confianza de negocios que crecen con nosotros
+    </h2>
+</div>
+<p class="subtext-muted text-body-md font-body-md text-[#9a9a9a] max-w-sm">
+    Resultados reales, comunicación clara y plataformas que convierten visitantes en clientes.
+  </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Testimonial 1 -->
+<div class="quote-card p-8 rounded-2xl border border-divider border-white/10 bg-[#141414] hover:border-white/30 transition-all duration-300 flex flex-col justify-between">
+<p class="text-body-md font-body-md text-[#d1d1d1] leading-relaxed mb-8 italic">
+      "La plataforma cambió por completo cómo mostramos las propiedades. Es rápida, fácil de navegar desde el teléfono y los clientes ahora llegan directamente cotizando por WhatsApp."
+    </p>
+<div class="flex items-center gap-3 pt-4 border-t border-divider border-white/10">
+<div class="w-10 h-10 rounded-full bg-[#222222] border border-white/10 flex items-center justify-center font-bold text-xs text-white">
+        RS
+      </div>
+<div>
+<p class="font-headline-sm font-semibold text-white text-sm">Roberto S.</p>
+<p class="subtext-muted text-label-code font-label-code text-[#888888] text-xs">Sector Inmobiliario &amp; Bienes Raíces</p>
+</div>
+</div>
+</div>
+<!-- Testimonial 2 -->
+<div class="quote-card p-8 rounded-2xl border border-divider border-white/10 bg-[#141414] hover:border-white/30 transition-all duration-300 flex flex-col justify-between">
+<p class="text-body-md font-body-md text-[#d1d1d1] leading-relaxed mb-8 italic">
+      "La calculadora de cuotas y el catálogo filtrable nos ahorraron horas respondiendo lo mismo por mensaje. La gente ya consulta sabiendo qué vehículo quiere y cómo pagarlo."
+    </p>
+<div class="flex items-center gap-3 pt-4 border-t border-divider border-white/10">
+<div class="w-10 h-10 rounded-full bg-[#222222] border border-white/10 flex items-center justify-center font-bold text-xs text-white">
+        CD
+      </div>
+<div>
+<p class="font-headline-sm font-semibold text-white text-sm">Carlos D.</p>
+<p class="subtext-muted text-label-code font-label-code text-[#888888] text-xs">Predio de Vehículos &amp; Concesionaria</p>
+</div>
+</div>
+</div>
+<!-- Testimonial 3 -->
+<div class="quote-card p-8 rounded-2xl border border-divider border-white/10 bg-[#141414] hover:border-white/30 transition-all duration-300 flex flex-col justify-between">
+<p class="text-body-md font-body-md text-[#d1d1d1] leading-relaxed mb-8 italic">
+      "Queríamos dejar atrás las plantillas genéricas lentas y tener una web moderna que transmitiera confianza. El proceso fue directo, rápido y sin enredos técnicos."
+    </p>
+<div class="flex items-center gap-3 pt-4 border-t border-divider border-white/10">
+<div class="w-10 h-10 rounded-full bg-[#222222] border border-white/10 flex items-center justify-center font-bold text-xs text-white">
+        MA
+      </div>
+<div>
+<p class="font-headline-sm font-semibold text-white text-sm">Mario A.</p>
+<p class="subtext-muted text-label-code font-label-code text-[#888888] text-xs">Empresa de Servicios Profesionales</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 8. FAQ / PREGUNTAS FRECUENTES (Acordeón Exclusivo e Interactivo con Cierre Automático) -->
+<section class="reveal-item pt-8 pb-24 md:pb-32 border-t border-divider border-white/10" id="preguntas">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+<div>
+<span class="subtext-muted text-label-pill font-label-pill uppercase text-[#888888] tracking-wider">Claridad Total</span>
+<h2 class="text-headline-md md:text-headline-lg font-headline-lg text-white tracking-tight mt-2">
+      Preguntas frecuentes &amp; Respuestas directas
+    </h2>
+</div>
+<p class="subtext-muted text-body-md font-body-md text-[#9a9a9a] max-w-sm">
+    Respuestas claras a las dudas más comunes antes de iniciar tu proyecto con nosotros.
+  </p>
+</div>
+<!-- FAQ Container con comportamiento de acordeón exclusivo y minimalista -->
+<div class="space-y-4" id="faq-accordion-group">
+<!-- FAQ Item 1 -->
+<div class="faq-card group p-6 rounded-2xl border border-divider border-white/10 bg-[#141414] transition-all duration-300 cursor-pointer" onclick="toggleExclusiveFaq(this)">
+<div class="flex items-center justify-between text-white font-headline-sm font-semibold text-lg select-none">
+<span>¿Cuánto tiempo toma tener mi sitio web listo?</span>
+<span class="material-symbols-outlined faq-indicator text-[#888888] text-xl ml-4">add</span>
+</div>
+<div class="faq-answer-wrapper">
+<div class="faq-answer-content">
+<p class="subtext-muted text-body-md font-body-md text-[#9a9a9a] pt-4 mt-2 leading-relaxed border-t border-divider border-white/5">
+        La mayoría de proyectos y catálogos comerciales toman entre 1 y 2 semanas, dependiendo del alcance y de la rapidez con la que nos compartas fotos, logos y datos de tu negocio. Para plataformas con cotizadores o integraciones especiales, definimos un calendario claro desde el primer día.
+      </p>
+</div>
+</div>
+</div>
+<!-- FAQ Item 2 -->
+<div class="faq-card group p-6 rounded-2xl border border-divider border-white/10 bg-[#141414] transition-all duration-300 cursor-pointer" onclick="toggleExclusiveFaq(this)">
+<div class="flex items-center justify-between text-white font-headline-sm font-semibold text-lg select-none">
+<span>¿Por qué eligen desarrollo a la medida en lugar de plantillas genéricas?</span>
+<span class="material-symbols-outlined faq-indicator text-[#888888] text-xl ml-4">add</span>
+</div>
+<div class="faq-answer-wrapper">
+<div class="faq-answer-content">
+<p class="subtext-muted text-body-md font-body-md text-[#9a9a9a] pt-4 mt-2 leading-relaxed border-t border-divider border-white/5">
+        Las plantillas prediseñadas suelen venir cargadas de código innecesario, plugins lentos y diseños repetitivos. Desarrollamos código optimizado para que tu página cargue al instante en celulares, transmita seriedad y se adapte exactamente a la forma en que tu empresa vende.
+      </p>
+</div>
+</div>
+</div>
+<!-- FAQ Item 3 -->
+<div class="faq-card group p-6 rounded-2xl border border-divider border-white/10 bg-[#141414] transition-all duration-300 cursor-pointer" onclick="toggleExclusiveFaq(this)">
+<div class="flex items-center justify-between text-white font-headline-sm font-semibold text-lg select-none">
+<span>¿Qué pasa después del lanzamiento? ¿Ofrecen soporte y mantenimiento?</span>
+<span class="material-symbols-outlined faq-indicator text-[#888888] text-xl ml-4">add</span>
+</div>
+<div class="faq-answer-wrapper">
+<div class="faq-answer-content">
+<p class="subtext-muted text-body-md font-body-md text-[#9a9a9a] pt-4 mt-2 leading-relaxed border-t border-divider border-white/5">
+        Tu plataforma queda 100% lista y funcionando en tu propio dominio. Además, ofrecemos planes de soporte mensual para actualizar fotos, inventarios, precios o agregar nuevas funciones a medida que tu negocio crezca.
+      </p>
+</div>
+</div>
+</div>
+<!-- FAQ Item 4 -->
+<div class="faq-card group p-6 rounded-2xl border border-divider border-white/10 bg-[#141414] transition-all duration-300 cursor-pointer" onclick="toggleExclusiveFaq(this)">
+<div class="flex items-center justify-between text-white font-headline-sm font-semibold text-lg select-none">
+<span>¿Cómo nos mantenemos en contacto durante el proyecto?</span>
+<span class="material-symbols-outlined faq-indicator text-[#888888] text-xl ml-4">add</span>
+</div>
+<div class="faq-answer-wrapper">
+<div class="faq-answer-content">
+<p class="subtext-muted text-body-md font-body-md text-[#9a9a9a] pt-4 mt-2 leading-relaxed border-t border-divider border-white/5">
+        Mantenemos comunicación directa por WhatsApp y correo para resolver dudas al instante. Te compartimos enlaces de prueba privados para que veas el avance en tiempo real y apruebes cada etapa antes de publicar la versión final.
+      </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 9. INQUIRY & CONTACT SECTION (With Kinetic Interactive Copy Feedback) -->
+<section class="reveal-item py-20 md:py-28 text-center border-t border-divider border-white/10 flex flex-col items-center" id="contacto">
+<!-- Central Isotype Glyph Badge -->
+<div class="hero-glyph-box mb-6 w-14 h-14 bg-[#141414] border border-white/15 rounded-2xl flex items-center justify-center shadow-lg hover:shadow-2xl hover:scale-105 hover:border-white/30 transition-all duration-300 cursor-default">
+<img alt="Lemus Studio Symbol" class="w-7 h-7 object-contain transition-transform duration-300 hover:rotate-6 rounded-sm" src="./assets/logo.jpg" onerror="this.onerror=null;this.src='https://lh3.googleusercontent.com/aida-public/AB6AXuBNSK96enIE5M1ZVH3fQuna-wiFiRJb4aKXJ39A4f_2Qwhs9I8xma3hxyQQWsrjUTYdEhCdoLSAJTDoeNMnMCOQT_4Gvysif8BlngBf4nal_lnTxXuMuP1ko2SgUcqlyoxgVIzMp4YZUgE4WswDNDxRUZ0TBuxw3o4I-_6_7i7zTzPtL1NmsV92N-GWbeySPs5PNB9ZCIJhY8R13w9CWfQSW6jpI4F4dF2JLkq8rfArEoNctQV5JVE6'"/>
+</div>
+<h2 class="text-headline-md md:text-headline-lg font-headline-lg text-white tracking-tight max-w-xl mx-auto mb-4">
+  ¿Tienes una visión en mente?<br/>Hagámosla realidad.
+</h2>
+<p class="subtext-muted text-body-md font-body-md text-[#9a9a9a] max-w-md mx-auto mb-8">
+  ¿Listo para llevar tu negocio al siguiente nivel? Escríbenos por WhatsApp o copia nuestro correo directo para cotizar tu proyecto hoy mismo.
+</p>
+<!-- Pill Button for Contact with Instant Ripple & Micro-particle Feedback -->
+<div class="contact-box-btn ripple-surface kinetic-spring relative inline-flex items-center gap-3 px-7 py-4 rounded-full border border-divider border-white/20 bg-[#141414] text-white shadow-xl hover:shadow-2xl group cursor-pointer overflow-hidden" id="email-capsule" onclick="copyEmailWithParticles(event, this)">
+<span class="kinetic-laser"></span>
+<span class="material-symbols-outlined text-[20px] transition-transform duration-300 group-hover:scale-110 relative z-10" id="mail-icon">alternate_email</span>
+<span class="font-headline-sm font-semibold tracking-tight text-body-lg relative z-10" id="email-text">lemustudioo@gmail.com</span>
+<span class="material-symbols-outlined text-[18px] opacity-70 group-hover:opacity-100 group-hover:scale-110 transition-all ml-1 relative z-10" id="copy-icon">content_copy</span>
+<span class="absolute -top-10 left-1/2 -translate-x-1/2 bg-white text-[#0a0a0a] font-bold text-label-pill font-label-pill px-3.5 py-1.5 rounded-full opacity-0 pointer-events-none transition-all duration-300 shadow-xl whitespace-nowrap scale-90" id="copy-tooltip">¡Copiado al portapapeles!</span>
+</div>
+<!-- Social Discovery Links with Kinetic Hover -->
+<div class="mt-8 flex items-center gap-6 text-label-pill font-label-pill uppercase tracking-wider text-[#888888] subtext-muted">
+<a class="nav-kinetic-link hover:text-white transition-colors duration-200" href="https://wa.me/50246141706?text=Hola%20Lemus%20Studio%2C%20me%20gustar%C3%ADa%20cotizar%20un%20proyecto%20web%20para%20mi%20negocio.%20%C2%BFPodr%C3%ADan%20darme%20m%C3%A1s%20informaci%C3%B3n%3F" rel="noopener noreferrer" target="_blank">WhatsApp</a>
+<span>·</span>
+<a class="nav-kinetic-link hover:text-white transition-colors duration-200" href="mailto:lemustudioo@gmail.com">Correo</a>
+</div>
+<!-- Tiny Note -->
+<p class="subtext-muted text-label-code font-label-code text-[#666666] mt-6">
+  Respuesta garantizada en menos de 24 horas hábiles.
+</p>
+</section>
+</main>
+<!-- SHARED COMPONENT: Footer (Editorial Minimal Execution) -->
+<footer class="w-full border-t border-divider border-white/10 bg-[#0a0a0a]">
+<div class="w-full max-w-7xl mx-auto px-6 md:px-16 py-12 md:py-20 flex flex-col md:flex-row justify-between items-center gap-8">
+<!-- Brand & Copyright -->
+<div class="flex flex-col md:flex-row items-center gap-4 text-center md:text-left">
+<a class="group text-headline-sm font-headline-sm font-bold tracking-tight text-white flex items-center gap-2" href="#">
+<img alt="Lemus Studio" class="w-5 h-5 object-contain transition-transform duration-300 group-hover:rotate-6 border border-white/10 rounded-sm bg-black" src="./assets/logo.jpg" onerror="this.onerror=null;this.src='https://lh3.googleusercontent.com/aida-public/AB6AXuBNSK96enIE5M1ZVH3fQuna-wiFiRJb4aKXJ39A4f_2Qwhs9I8xma3hxyQQWsrjUTYdEhCdoLSAJTDoeNMnMCOQT_4Gvysif8BlngBf4nal_lnTxXuMuP1ko2SgUcqlyoxgVIzMp4YZUgE4WswDNDxRUZ0TBuxw3o4I-_6_7i7zTzPtL1NmsV92N-GWbeySPs5PNB9ZCIJhY8R13w9CWfQSW6jpI4F4dF2JLkq8rfArEoNctQV5JVE6'"/>
+<span>Lemus Studio</span>
+</a>
+<span class="hidden md:inline text-white/20">|</span>
+<span class="subtext-muted text-body-sm font-body-sm text-[#888888]">
+  © 2025 Lemus Studio. Craft over code. Todos los derechos reservados.
+</span>
+</div>
+<!-- Footer Navigation Links with Kinetic Underlines -->
+<div class="subtext-muted flex flex-wrap justify-center items-center gap-6 text-label-code font-label-code text-[#888888]">
+<button type="button" class="nav-kinetic-link hover:text-white transition-colors duration-200 cursor-pointer flex items-center gap-1 font-semibold" onclick="openContactModal(event)">
+  <span>CONTACTO</span>
+  <span class="material-symbols-outlined text-[13px]">arrow_forward</span>
+</button>
+<a class="nav-kinetic-link hover:text-white transition-colors duration-200" href="https://wa.me/50246141706?text=Hola%20Lemus%20Studio%2C%20me%20gustar%C3%ADa%20cotizar%20un%20proyecto%20web%20para%20mi%20negocio.%20%C2%BFPodr%C3%ADan%20darme%20m%C3%A1s%20informaci%C3%B3n%3F" rel="noopener" target="_blank">WhatsApp</a>
+<a class="nav-kinetic-link hover:text-white transition-colors duration-200" href="mailto:lemustudioo@gmail.com">Correo</a>
+</div>
+</div>
+</footer>
+
+<!-- INTERACTIVE BRUTALIST CONTACT MODAL (Pure Deep Black & White Minimalist) -->
+<div id="contact-modal" class="fixed inset-0 z-[9999] flex items-center justify-center p-4 sm:p-6 opacity-0 pointer-events-none transition-all duration-300 ease-out" onclick="handleModalBackdropClick(event)">
+  <div id="contact-modal-container" class="relative w-full max-w-lg rounded-3xl p-6 sm:p-8 transform scale-95 transition-all duration-300 ease-out shadow-2xl border" onclick="event.stopPropagation()">
+    
+    <!-- Close Button (Minimalist SVG X 1.5px stroke) -->
+    <button type="button" aria-label="Cerrar modal" class="modal-close-btn absolute top-5 right-5 w-9 h-9 rounded-full flex items-center justify-center transition-colors duration-200 cursor-pointer" onclick="closeContactModal()">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+
+    <!-- Header -->
+    <div class="mb-6">
+      <div class="modal-eyebrow inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-label-code font-mono uppercase tracking-widest border mb-3">
+        <span>[INICIAR PROYECTO]</span>
+      </div>
+      <h3 class="font-headline-sm font-bold text-white text-xl sm:text-2xl tracking-tight mb-1.5">
+        Cuéntanos sobre tu proyecto
+      </h3>
+      <p class="text-xs sm:text-sm text-[#9a9a9a] leading-relaxed">
+        Selecciona una o más opciones y te atenderemos directamente por WhatsApp.
+      </p>
+    </div>
+
+    <!-- Form -->
+    <form onsubmit="submitContactToWhatsApp(event)" class="space-y-4">
+      
+      <!-- Multi-select Service Options (6 realistic business categories) -->
+      <div>
+        <label class="block text-[11px] font-label-code font-semibold uppercase tracking-wider text-[#d1d1d1] mb-2 flex items-center justify-between">
+          <span>¿Qué tipo de solución buscas?</span>
+          <span class="text-[10px] text-white/50 lowercase font-normal">(elige al menos 1)</span>
+        </label>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2" id="service-options-group">
+          
+          <!-- Option 1: Web para mi negocio (Active by default) -->
+          <button type="button" class="modal-service-btn active flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl text-left text-xs transition-all duration-200 cursor-pointer" onclick="toggleModalService(this, 'Web para mi negocio')">
+            <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+              <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+            </svg>
+            <span class="font-medium">Web para mi negocio</span>
+          </button>
+
+          <!-- Option 2: Catálogo de productos -->
+          <button type="button" class="modal-service-btn flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl text-left text-xs transition-all duration-200 cursor-pointer" onclick="toggleModalService(this, 'Catálogo de productos')">
+            <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <path d="M16 10a4 4 0 0 1-8 0"></path>
+            </svg>
+            <span class="font-medium">Catálogo de productos</span>
+          </button>
+
+          <!-- Option 3: Cotizador o calculadora -->
+          <button type="button" class="modal-service-btn flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl text-left text-xs transition-all duration-200 cursor-pointer" onclick="toggleModalService(this, 'Cotizador o calculadora')">
+            <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="4" y="2" width="16" height="20" rx="2"></rect>
+              <line x1="8" y1="6" x2="16" y2="6"></line>
+              <line x1="16" y1="14" x2="16" y2="18"></line>
+              <path d="M8 10h.01"></path><path d="M12 10h.01"></path><path d="M16 10h.01"></path>
+              <path d="M8 14h.01"></path><path d="M12 14h.01"></path>
+              <path d="M8 18h.01"></path><path d="M12 18h.01"></path>
+            </svg>
+            <span class="font-medium">Cotizador o calculadora</span>
+          </button>
+
+          <!-- Option 4: Página para bienes raíces -->
+          <button type="button" class="modal-service-btn flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl text-left text-xs transition-all duration-200 cursor-pointer" onclick="toggleModalService(this, 'Página para bienes raíces')">
+            <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+              <polyline points="9 22 9 12 15 12 15 22"></polyline>
+            </svg>
+            <span class="font-medium">Página para bienes raíces</span>
+          </button>
+
+          <!-- Option 5: Panel de control o sistema -->
+          <button type="button" class="modal-service-btn flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl text-left text-xs transition-all duration-200 cursor-pointer" onclick="toggleModalService(this, 'Panel de control o sistema')">
+            <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="3" y1="9" x2="21" y2="9"></line>
+              <line x1="9" y1="21" x2="9" y2="9"></line>
+            </svg>
+            <span class="font-medium">Panel de control o sistema</span>
+          </button>
+
+          <!-- Option 6: Landing page de ventas -->
+          <button type="button" class="modal-service-btn flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl text-left text-xs transition-all duration-200 cursor-pointer" onclick="toggleModalService(this, 'Landing page de ventas')">
+            <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+            </svg>
+            <span class="font-medium">Landing page de ventas</span>
+          </button>
+
+        </div>
+      </div>
+
+      <!-- Identification Input (Rectangular with rounded corners) -->
+      <div>
+        <label for="modal-client-name" class="block text-[11px] font-label-code font-semibold uppercase tracking-wider text-[#d1d1d1] mb-1.5 flex items-center justify-between">
+          <span>Nombre o Empresa</span>
+          <span class="text-[10px] text-white/50 lowercase font-normal">(obligatorio)</span>
+        </label>
+        <input type="text" id="modal-client-name" required placeholder="Ej. Inmobiliaria Santander o Roberto S." class="w-full px-4 py-3 text-xs sm:text-sm focus:outline-none transition-all duration-200" autocomplete="off" oninput="clearInputError(this)" />
+      </div>
+
+      <!-- Details Textarea (Rectangular with rounded corners) -->
+      <div>
+        <label for="modal-project-details" class="block text-[11px] font-label-code font-semibold uppercase tracking-wider text-[#d1d1d1] mb-1.5 flex items-center justify-between">
+          <span>¿Qué necesitas o qué funciones imaginas?</span>
+          <span class="text-[10px] text-white/50 lowercase font-normal">(obligatorio)</span>
+        </label>
+        <textarea id="modal-project-details" required rows="3" placeholder="Describe brevemente las funciones, productos o el objetivo que buscas." class="w-full px-4 py-3 text-xs sm:text-sm focus:outline-none transition-all duration-200 resize-none" oninput="clearInputError(this)"></textarea>
+      </div>
+
+      <!-- Inline Validation Banner -->
+      <div id="modal-validation-msg" class="hidden text-xs text-[#ef4444] font-label-code bg-[#ef4444]/10 border border-[#ef4444]/30 rounded-xl px-3.5 py-2 text-center transition-all duration-200">
+        Por favor, completa todos los apartados para continuar.
+      </div>
+
+      <!-- Submit Button: "Enviar" with kinetic shimmer laser sweep -->
+      <div class="pt-1">
+        <button type="submit" class="modal-submit-btn ripple-surface kinetic-spring w-full py-3.5 px-6 rounded-full font-bold uppercase tracking-wider text-xs sm:text-sm flex items-center justify-center gap-2 cursor-pointer transition-all duration-200 relative overflow-hidden shadow-lg hover:shadow-2xl" onclick="createRipple(event, this)">
+          <span class="kinetic-laser"></span>
+          <span class="relative z-10 font-bold tracking-wider">Enviar</span>
+          <svg class="w-4 h-4 relative z-10 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Micro Note -->
+      <p class="text-center text-[10px] text-[#777777] font-label-code pt-1">
+        Sin intermediarios // Conexión directa y cifrada por WhatsApp
+      </p>
+
+    </form>
+  </div>
+</div>
+<!-- Interactive Scripts: Exclusive FAQ Accordion, Kinetic Tactile Feedback, Theme 360 Rotation, Email Copy & Scroll Reveal -->
+<script>
+    // Exclusive FAQ Accordion with Auto-close of previously active items
+    function toggleExclusiveFaq(targetCard) {
+      const allCards = document.querySelectorAll('#faq-accordion-group .faq-card');
+      const isAlreadyOpen = targetCard.classList.contains('is-active');
+
+      // Close all other open cards
+      allCards.forEach(card => {
+        if (card !== targetCard) {
+          card.classList.remove('is-active');
+        }
+      });
+
+      // Toggle current target
+      if (isAlreadyOpen) {
+        targetCard.classList.remove('is-active');
+      } else {
+        targetCard.classList.add('is-active');
+      }
+    }
+
+    // Kinetic Tactile Ripple Generator for buttons
+    function createRipple(event, element) {
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      const rect = element.getBoundingClientRect();
+      const circle = document.createElement('span');
+      const size = Math.max(rect.width, rect.height);
+      const x = event.clientX - rect.left;
+      const y = event.clientY - rect.top;
+
+      circle.style.width = circle.style.height = `${size}px`;
+      circle.style.left = `${x}px`;
+      circle.style.top = `${y}px`;
+      circle.classList.add('ripple-effect');
+
+      const existing = element.querySelector('.ripple-effect');
+      if (existing) existing.remove();
+
+      element.appendChild(circle);
+      setTimeout(() => circle.remove(), 700);
+    }
+
+    // Theme Toggle Functionality with Orbital 360° spin
+    function updateThemeUI(isDark) {
+      const icon = document.getElementById('theme-toggle-icon');
+      const toggleBtn = document.getElementById('theme-toggle');
+      if (icon) {
+        icon.textContent = isDark ? 'light_mode' : 'dark_mode';
+      }
+      if (toggleBtn) {
+        toggleBtn.setAttribute('title', isDark ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro');
+        toggleBtn.setAttribute('aria-label', isDark ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro');
+      }
+      if (typeof window.syncLemusThreeTheme === 'function') {
+        window.syncLemusThreeTheme();
+      }
+    }
+
+    function toggleThemeWithFeedback(btn) {
+      if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        btn.classList.add('is-spinning');
+        setTimeout(() => btn.classList.remove('is-spinning'), 650);
+      }
+      const htmlEl = document.documentElement;
+      const isDark = htmlEl.classList.toggle('dark');
+      try {
+        localStorage.setItem('lemus_theme', isDark ? 'dark' : 'light');
+      } catch (e) {}
+      updateThemeUI(isDark);
+    }
+
+    // Initialize Theme on load
+    (function initTheme() {
+      try {
+        const savedTheme = localStorage.getItem('lemus_theme');
+        if (savedTheme === 'light') {
+          document.documentElement.classList.remove('dark');
+        } else if (savedTheme === 'dark') {
+          document.documentElement.classList.add('dark');
+        }
+      } catch(e) {}
+    })();
+
+    // Copy Email functionality with ripple + cinematic micro-particles & text swap
+    function copyEmailWithParticles(event, element) {
+      createRipple(event, element);
+      const email = 'lemustudioo@gmail.com';
+
+      // Spawn micro-particles if motion is enabled
+      if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        const rect = element.getBoundingClientRect();
+        const colors = ['#ffffff', '#00e5ff', '#b4b4b4', '#60a5fa'];
+        for (let i = 0; i < 14; i++) {
+          const dot = document.createElement('span');
+          dot.className = 'confetti-dot';
+          const angle = (Math.PI * 2 / 14) * i + (Math.random() * 0.4);
+          const distance = 40 + Math.random() * 50;
+          dot.style.setProperty('--tx', `${Math.cos(angle) * distance}px`);
+          dot.style.setProperty('--ty', `${Math.sin(angle) * distance}px`);
+          dot.style.left = `${event.clientX - rect.left}px`;
+          dot.style.top = `${event.clientY - rect.top}px`;
+          dot.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+          element.appendChild(dot);
+          setTimeout(() => dot.remove(), 800);
+        }
+      }
+
+      // Visual text & icon feedback
+      const copyIcon = document.getElementById('copy-icon');
+      const mailIcon = document.getElementById('mail-icon');
+      const tooltip = document.getElementById('copy-tooltip');
+
+      navigator.clipboard.writeText(email).then(() => {
+        if (copyIcon) copyIcon.textContent = 'check_circle';
+        if (mailIcon) mailIcon.textContent = 'mark_email_read';
+
+        if (tooltip) {
+          tooltip.classList.remove('opacity-0', 'scale-90');
+          tooltip.classList.add('opacity-100', 'scale-100', '-translate-y-2');
+        }
+
+        setTimeout(() => {
+          if (copyIcon) copyIcon.textContent = 'content_copy';
+          if (mailIcon) mailIcon.textContent = 'alternate_email';
+          if (tooltip) {
+            tooltip.classList.remove('opacity-100', 'scale-100', '-translate-y-2');
+            tooltip.classList.add('opacity-0', 'scale-90');
+          }
+        }, 2200);
+      }).catch(() => {
+        window.location.href = `mailto:${email}`;
+      });
+    }
+
+    // Scroll Reveal with IntersectionObserver
+    document.addEventListener('DOMContentLoaded', () => {
+      const isDark = document.documentElement.classList.contains('dark');
+      const icon = document.getElementById('theme-toggle-icon');
+      if (icon) {
+        icon.textContent = isDark ? 'light_mode' : 'dark_mode';
+      }
+
+      const reveals = document.querySelectorAll('.reveal-item');
+      
+      if ('IntersectionObserver' in window) {
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('revealed');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, {
+          threshold: 0.08,
+          rootMargin: '0px 0px -30px 0px'
+        });
+
+        reveals.forEach(el => revealObserver.observe(el));
+      } else {
+        reveals.forEach(el => el.classList.add('revealed'));
+      }
+
+      // Dynamic header elevation on scroll
+      const header = document.getElementById('nav-island');
+      window.addEventListener('scroll', () => {
+        const currentScroll = window.pageYOffset;
+        if (currentScroll > 40) {
+          header.classList.add('shadow-2xl', 'scrolled-nav');
+          if (document.documentElement.classList.contains('dark')) {
+            header.classList.add('bg-[#121212]/95', 'border-white/20');
+            header.classList.remove('bg-[#121212]/80', 'border-white/10');
+          }
+        } else {
+          header.classList.remove('shadow-2xl', 'scrolled-nav');
+          if (document.documentElement.classList.contains('dark')) {
+            header.classList.remove('bg-[#121212]/95', 'border-white/20');
+            header.classList.add('bg-[#121212]/80', 'border-white/10');
+          }
+        }
+      }, { passive: true });
+    });
+
+    // =========================================================
+    // INTERACTIVE BRUTALIST CONTACT MODAL & MULTI-SELECT WHATSAPP
+    // =========================================================
+    let selectedModalServices = new Set(['Web para mi negocio']);
+
+    function openContactModal(event) {
+      if (event) {
+        event.preventDefault();
+        if (typeof createRipple === 'function') createRipple(event, event.currentTarget);
+      }
+      const modal = document.getElementById('contact-modal');
+      if (modal) {
+        modal.classList.add('is-open');
+        document.body.style.overflow = 'hidden';
+        setTimeout(() => {
+          const nameInput = document.getElementById('modal-client-name');
+          if (nameInput) nameInput.focus();
+        }, 120);
+      }
+    }
+
+    function closeContactModal() {
+      const modal = document.getElementById('contact-modal');
+      if (modal) {
+        modal.classList.remove('is-open');
+        document.body.style.overflow = '';
+      }
+    }
+
+    function handleModalBackdropClick(event) {
+      if (event && event.target && event.target.id === 'contact-modal') {
+        closeContactModal();
+      }
+    }
+
+    function clearInputError(element) {
+      if (element) element.classList.remove('field-error');
+      const valMsg = document.getElementById('modal-validation-msg');
+      if (valMsg) valMsg.classList.add('hidden');
+    }
+
+    function toggleModalService(btn, serviceName) {
+      if (selectedModalServices.has(serviceName)) {
+        selectedModalServices.delete(serviceName);
+        btn.classList.remove('active');
+      } else {
+        selectedModalServices.add(serviceName);
+        btn.classList.add('active');
+      }
+      const group = document.getElementById('service-options-group');
+      if (group) group.classList.remove('field-error');
+      const valMsg = document.getElementById('modal-validation-msg');
+      if (valMsg) valMsg.classList.add('hidden');
+    }
+
+    function submitContactToWhatsApp(event) {
+      if (event) event.preventDefault();
+
+      const nameInput = document.getElementById('modal-client-name');
+      const detailsInput = document.getElementById('modal-project-details');
+      const serviceGroup = document.getElementById('service-options-group');
+      const valMsg = document.getElementById('modal-validation-msg');
+
+      const rawName = nameInput ? nameInput.value.trim() : '';
+      const rawDetails = detailsInput ? detailsInput.value.trim() : '';
+
+      // Reset previous error states
+      if (nameInput) nameInput.classList.remove('field-error');
+      if (detailsInput) detailsInput.classList.remove('field-error');
+      if (serviceGroup) serviceGroup.classList.remove('field-error');
+      if (valMsg) valMsg.classList.add('hidden');
+
+      // 1. Mandatory Service Selection Validation
+      if (selectedModalServices.size === 0) {
+        if (serviceGroup) serviceGroup.classList.add('field-error');
+        if (valMsg) {
+          valMsg.textContent = 'Por favor, selecciona al menos una solución para tu proyecto.';
+          valMsg.classList.remove('hidden');
+        }
+        return;
+      }
+
+      // 2. Mandatory Name Validation
+      if (!rawName) {
+        if (nameInput) {
+          nameInput.classList.add('field-error');
+          nameInput.focus();
+        }
+        if (valMsg) {
+          valMsg.textContent = 'Por favor, ingresa tu nombre o el de tu empresa.';
+          valMsg.classList.remove('hidden');
+        }
+        return;
+      }
+
+      // 3. Mandatory Details Validation
+      if (!rawDetails) {
+        if (detailsInput) {
+          detailsInput.classList.add('field-error');
+          detailsInput.focus();
+        }
+        if (valMsg) {
+          valMsg.textContent = 'Por favor, describe brevemente qué necesitas o qué funciones imaginas.';
+          valMsg.classList.remove('hidden');
+        }
+        return;
+      }
+
+      // All sections filled: sanitize inputs
+      const cleanName = rawName.replace(/[<>]/g, '');
+      const cleanDetails = rawDetails.replace(/[<>]/g, '');
+      const servicesText = Array.from(selectedModalServices).join(', ');
+
+      // Strict clean report format without emojis
+      const message = [
+        'LEMUS STUDIO // NUEVA CONSULTA',
+        '---------------------------------',
+        'Servicios requeridos: ' + servicesText,
+        'Nombre / Empresa: ' + cleanName,
+        'Detalles: ' + cleanDetails,
+        '---------------------------------',
+        'Enviado desde el portafolio web.'
+      ].join('\n');
+
+      const phone = '50246141706';
+      const whatsappUrl = 'https://wa.me/' + phone + '?text=' + encodeURIComponent(message);
+
+      window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+      closeContactModal();
+    }
+
+    // Close on Escape key
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' || event.key === 'Esc') {
+        const modal = document.getElementById('contact-modal');
+        if (modal && modal.classList.contains('is-open')) {
+          closeContactModal();
+        }
+      }
+    });
+  </script>
+</body></html>
