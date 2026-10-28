@@ -1924,7 +1924,7 @@ window.addEventListener('resize', handleResize);
 </a>
 <span class="hidden md:inline text-white/20">|</span>
 <span class="subtext-muted text-body-sm font-body-sm text-[#888888]">
-  © 2025 Lemus Studio. Craft over code. Todos los derechos reservados.
+  © <span class="dynamic-current-year">2025</span> Lemus Studio. Craft over code. Todos los derechos reservados.
 </span>
 <span class="hidden lg:inline text-white/20">|</span>
 <a class="nav-kinetic-link text-xs font-label-code text-[#888888] hover:text-white transition-colors duration-200 underline underline-offset-4" href="legal.html" target="_blank" rel="noopener">
@@ -2161,7 +2161,7 @@ window.addEventListener('resize', handleResize);
       updateThemeUI(isDark);
     }
 
-    // Initialize Theme on load
+    // Initialize Theme & Dynamic Year on load
     (function initTheme() {
       try {
         const savedTheme = localStorage.getItem('lemus_theme');
@@ -2170,6 +2170,12 @@ window.addEventListener('resize', handleResize);
         } else if (savedTheme === 'dark') {
           document.documentElement.classList.add('dark');
         }
+      } catch(e) {}
+      try {
+        const currentYear = new Date().getFullYear();
+        document.querySelectorAll('.dynamic-current-year').forEach(el => {
+          el.textContent = currentYear;
+        });
       } catch(e) {}
     })();
 
