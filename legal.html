@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html class="scroll-smooth dark" lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Términos de Servicio y Política de Privacidad — Lemus Studio</title>
+  <meta name="description" content="Términos y condiciones de servicio, exención de resultados comerciales, propiedad intelectual y política de privacidad de Lemus Studio."/>
+  
+  <!-- Google Fonts & Material Symbols -->
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&amp;family=Geist:wght@300;400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+  
+  <!-- Tailwind CSS v3 -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-dim": "#080808",
+            "background": "#080808",
+            "primary": "#ffffff",
+            "on-primary": "#0a0a0a",
+            "surface": "#080808",
+            "on-surface": "#ededed",
+            "on-surface-variant": "#9a9a9a"
+          },
+          fontFamily: {
+            "headline": ["Hanken Grotesk", "sans-serif"],
+            "body": ["Hanken Grotesk", "sans-serif"],
+            "label-code": ["Geist", "monospace"],
+            "label-pill": ["Geist", "monospace"]
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    ::selection {
+      background-color: #ffffff;
+      color: #080808;
+    }
+    html:not(.dark) ::selection {
+      background-color: #080808;
+      color: #ffffff;
+    }
+
+    /* Universal fluid theme transitions */
+    body, header, nav, main, section, article, footer, div, span, h1, h2, h3, h4, p, a, button {
+      transition: background-color 0.28s ease, border-color 0.28s ease, color 0.28s ease, box-shadow 0.28s ease;
+    }
+
+    /* Light mode styling */
+    html:not(.dark) body {
+      background-color: #f7f7f8 !important;
+      color: #111111 !important;
+    }
+    html:not(.dark) #nav-island {
+      background-color: rgba(255, 255, 255, 0.92) !important;
+      border-color: rgba(0, 0, 0, 0.08) !important;
+      box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.08) !important;
+    }
+    html:not(.dark) #nav-island a:not(.contact-cta-pill) span,
+    html:not(.dark) #nav-island a:not(.contact-cta-pill) {
+      color: #111111 !important;
+    }
+    html:not(.dark) .legal-card {
+      background-color: #ffffff !important;
+      border-color: rgba(0, 0, 0, 0.08) !important;
+      box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.04) !important;
+    }
+    html:not(.dark) .legal-card:hover {
+      border-color: rgba(0, 0, 0, 0.2) !important;
+      box-shadow: 0 12px 30px -6px rgba(0, 0, 0, 0.07) !important;
+    }
+    html:not(.dark) .legal-clause-badge {
+      background-color: #f0f0f2 !important;
+      border-color: rgba(0, 0, 0, 0.1) !important;
+      color: #222222 !important;
+    }
+    html:not(.dark) .legal-title {
+      color: #0a0a0a !important;
+    }
+    html:not(.dark) .legal-paragraph {
+      color: #444444 !important;
+    }
+    html:not(.dark) .legal-highlight-box {
+      background-color: #f4f5f7 !important;
+      border-color: rgba(0, 0, 0, 0.12) !important;
+      color: #1a1a1a !important;
+    }
+    html:not(.dark) .subtext-muted {
+      color: #555555 !important;
+    }
+    html:not(.dark) footer {
+      background-color: #f0f0f2 !important;
+      border-color: rgba(0, 0, 0, 0.08) !important;
+    }
+    html:not(.dark) footer .text-white,
+    html:not(.dark) footer a.text-white {
+      color: #0a0a0a !important;
+    }
+    html:not(.dark) footer .subtext-muted {
+      color: #555555 !important;
+    }
+    html:not(.dark) footer a.nav-kinetic-link {
+      color: #555555 !important;
+    }
+    html:not(.dark) footer a.nav-kinetic-link:hover {
+      color: #000000 !important;
+    }
+    html:not(.dark) .theme-toggle-btn {
+      background-color: #ffffff !important;
+      border-color: rgba(0, 0, 0, 0.12) !important;
+      color: #0a0a0a !important;
+    }
+    html:not(.dark) .toc-pill {
+      background-color: #ffffff !important;
+      border-color: rgba(0, 0, 0, 0.1) !important;
+      color: #333333 !important;
+    }
+    html:not(.dark) .toc-pill:hover,
+    html:not(.dark) .toc-pill.active {
+      background-color: #0a0a0a !important;
+      color: #ffffff !important;
+      border-color: #0a0a0a !important;
+    }
+
+    /* Kinetic Laser Shimmer */
+    .kinetic-laser {
+      position: absolute;
+      top: 0;
+      left: -150%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.35), transparent);
+      transform: skewX(-20deg);
+      pointer-events: none;
+      transition: left 0.6s ease;
+    }
+    button:hover .kinetic-laser,
+    a:hover .kinetic-laser {
+      left: 150%;
+    }
+
+    /* Kinetic Navigation Underlines */
+    .nav-kinetic-link {
+      position: relative;
+      display: inline-block;
+    }
+    .nav-kinetic-link::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 1.5px;
+      background-color: currentColor;
+      transition: width 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .nav-kinetic-link:hover::after {
+      width: 100%;
+    }
+
+    /* Theme button spinning */
+    .is-spinning {
+      transform: rotate(360deg);
+    }
+  </style>
+</head>
+<body class="bg-[#080808] text-[#ededed] antialiased selection:bg-white selection:text-black min-h-screen flex flex-col font-body transition-colors duration-300">
+
+  <!-- SHARED FLOATING NAVBAR -->
+  <header class="fixed top-6 left-1/2 -translate-x-1/2 rounded-full z-50 w-[92%] max-w-5xl px-5 py-2.5 flex items-center justify-between mx-auto bg-[#121212]/80 backdrop-blur-md border border-white/10 shadow-2xl transition-all duration-300 hover:border-white/20" id="nav-island">
+    <!-- Brand Logo Anchor (links to home) -->
+    <a class="group flex items-center gap-3 text-sm sm:text-base font-bold tracking-tight text-white transition-all duration-200" href="index.html">
+      <img alt="Lemus Studio Isotype" class="w-7 h-7 object-contain rounded-md transition-transform duration-300 group-hover:rotate-6 group-hover:scale-105 border border-white/10 bg-black" src="./assets/logo.jpg" onerror="this.onerror=null;this.src='https://lh3.googleusercontent.com/aida-public/AB6AXuBNSK96enIE5M1ZVH3fQuna-wiFiRJb4aKXJ39A4f_2Qwhs9I8xma3hxyQQWsrjUTYdEhCdoLSAJTDoeNMnMCOQT_4Gvysif8BlngBf4nal_lnTxXuMuP1ko2SgUcqlyoxgVIzMp4YZUgE4WswDNDxRUZ0TBuxw3o4I-_6_7i7zTzPtL1NmsV92N-GWbeySPs5PNB9ZCIJhY8R13w9CWfQSW6jpI4F4dF2JLkq8rfArEoNctQV5JVE6'"/>
+      <span class="group-hover:tracking-normal transition-all duration-200">Lemus Studio</span>
+      <span class="text-[11px] font-label-code text-[#888888] font-normal hidden sm:inline">// Legal</span>
+    </a>
+
+    <!-- Center Quick Anchor Nav -->
+    <nav class="hidden md:flex items-center gap-6">
+      <a class="nav-kinetic-link text-xs font-label-code uppercase tracking-wider text-[#9a9a9a] hover:text-white transition-colors duration-200" href="#terminos">Términos de Servicio</a>
+      <a class="nav-kinetic-link text-xs font-label-code uppercase tracking-wider text-[#9a9a9a] hover:text-white transition-colors duration-200" href="#privacidad">Política de Privacidad</a>
+      <a class="nav-kinetic-link text-xs font-label-code uppercase tracking-wider text-[#9a9a9a] hover:text-white transition-colors duration-200" href="#contacto-legal">Contacto</a>
+    </nav>
+
+    <!-- Right Controls: Theme Toggle & Back Button -->
+    <div class="flex items-center gap-3">
+      <!-- Light/Dark Mode Switcher -->
+      <button aria-label="Cambiar tema claro u oscuro" class="theme-toggle-btn relative w-9 h-9 rounded-full bg-[#1b1b1b] border border-white/15 text-white flex items-center justify-center transition-all duration-300 hover:border-white/40 shadow-sm cursor-pointer" id="theme-toggle" onclick="toggleThemeWithFeedback(this)" title="Alternar tema">
+        <span class="material-symbols-outlined text-[19px] transition-transform duration-500" id="theme-toggle-icon">light_mode</span>
+      </button>
+
+      <!-- Return Button -->
+      <a class="contact-cta-pill relative text-xs font-label-code uppercase tracking-wider px-4 sm:px-5 py-2 rounded-full bg-white text-[#0a0a0a] font-bold shadow-sm hover:shadow-lg flex items-center gap-1.5 transition-all duration-200 overflow-hidden" href="index.html">
+        <span class="kinetic-laser"></span>
+        <span class="material-symbols-outlined text-[14px]">arrow_back</span>
+        <span class="relative z-10 hidden sm:inline">Volver</span>
+        <span class="relative z-10 sm:hidden">Inicio</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT CONTAINER -->
+  <main class="flex-1 w-full max-w-4xl mx-auto px-5 sm:px-8 pt-32 sm:pt-40 pb-24">
+
+    <!-- HERO HEADER -->
+    <header class="text-center mb-14 sm:mb-20">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-[11px] font-label-code uppercase tracking-widest border border-white/15 bg-[#141414] text-[#d1d1d1] mb-6">
+        <span class="w-1.5 h-1.5 rounded-full bg-[#22c55e]"></span>
+        <span>Marco Legal // Lemus Studio</span>
+      </div>
+      
+      <h1 class="legal-title text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white mb-5 leading-tight">
+        Términos de Servicio &amp; Política de Privacidad
+      </h1>
+      
+      <p class="subtext-muted text-sm sm:text-base text-[#9a9a9a] max-w-2xl mx-auto leading-relaxed mb-8">
+        Transparencia contractual, exención de resultados comerciales, derechos de autor y protección rigurosa de datos para todos los proyectos desarrollados por Lemus Studio.
+      </p>
+
+      <!-- Metadata chips -->
+      <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 text-xs font-label-code text-[#777777]">
+        <span class="px-3 py-1 rounded-lg border border-white/10 bg-[#121212]/50">Vigencia: 2025 – 2026</span>
+        <span class="hidden sm:inline text-white/20">•</span>
+        <span class="px-3 py-1 rounded-lg border border-white/10 bg-[#121212]/50">Jurisdicción: República de Guatemala</span>
+        <span class="hidden sm:inline text-white/20">•</span>
+        <span class="px-3 py-1 rounded-lg border border-white/10 bg-[#121212]/50">Actualizado: Octubre 2025</span>
+      </div>
+    </header>
+
+    <!-- QUICK JUMP PILLS -->
+    <div class="flex flex-wrap items-center justify-center gap-2.5 mb-14 pb-4 border-b border-white/10">
+      <a href="#terminos" class="toc-pill px-4 py-2 rounded-full border border-white/15 bg-[#141414] text-xs font-label-code text-[#cccccc] hover:text-white hover:border-white transition-all">
+        01 // Términos de Servicio
+      </a>
+      <a href="#privacidad" class="toc-pill px-4 py-2 rounded-full border border-white/15 bg-[#141414] text-xs font-label-code text-[#cccccc] hover:text-white hover:border-white transition-all">
+        02 // Política de Privacidad
+      </a>
+      <a href="#contacto-legal" class="toc-pill px-4 py-2 rounded-full border border-white/15 bg-[#141414] text-xs font-label-code text-[#cccccc] hover:text-white hover:border-white transition-all">
+        03 // Canales de Contacto
+      </a>
+    </div>
+
+    <!-- SECTION 1: TÉRMINOS DE SERVICIO -->
+    <section id="terminos" class="space-y-8 mb-20 scroll-mt-32">
+      <div class="flex items-center gap-3 pb-2 border-b border-white/15">
+        <span class="font-label-code text-xs text-[#888888]">[PARTE 01]</span>
+        <h2 class="legal-title text-xl sm:text-2xl font-bold tracking-tight text-white">
+          Términos y Condiciones de Servicio
+        </h2>
+      </div>
+
+      <!-- CLÁUSULA 1: Exención de resultados comerciales (FOTO) -->
+      <article class="legal-card rounded-2xl p-6 sm:p-8 bg-[#121212] border border-white/10 transition-all duration-200">
+        <div class="flex items-center justify-between gap-4 mb-4">
+          <span class="legal-clause-badge text-[11px] font-label-code px-2.5 py-1 rounded-md bg-[#1a1a1a] text-[#d1d1d1] border border-white/10 uppercase tracking-wider">
+            Cláusula 1.0 // Desempeño Comercial
+          </span>
+          <span class="text-xs font-label-code text-[#888888]">Crucial</span>
+        </div>
+        <h3 class="legal-title text-lg sm:text-xl font-bold text-white mb-3">
+          Exención de Resultados Comerciales y Monetarios
+        </h3>
+        <p class="legal-paragraph text-sm sm:text-base text-[#a3a3a3] leading-relaxed mb-4">
+          <strong class="text-white font-semibold">Lemus Studio</strong> entrega la infraestructura técnica, arquitectura de software, optimización de velocidad de carga y el diseño visual acordado con estándares de ingeniería de alto nivel. 
+        </p>
+        <div class="legal-highlight-box rounded-xl p-4 sm:p-5 bg-[#181818] border border-white/15 text-sm sm:text-base text-[#e5e5e5] leading-relaxed mb-4">
+          <strong>Aclaración contractual expresa:</strong> Lemus Studio no garantiza volumen específico de ventas, número de conversiones, ingresos monetarios ni resultados de pauta publicitaria, campañas de marketing o tráfico de terceros ajenos al desarrollo web estricto.
+        </div>
+        <p class="legal-paragraph text-xs sm:text-sm text-[#888888] leading-relaxed">
+          El retorno de inversión comercial de cualquier plataforma o sitio web depende enteramente de la viabilidad de mercado del producto o servicio ofrecido por el cliente, su estrategia comercial, atención al comprador y factores macroeconómicos independientes de la programación y el diseño web.
+        </p>
+      </article>
+
+      <!-- CLÁUSULA 2: Propiedad Intelectual (FOTO) -->
+      <article class="legal-card rounded-2xl p-6 sm:p-8 bg-[#121212] border border-white/10 transition-all duration-200">
+        <div class="flex items-center justify-between gap-4 mb-4">
+          <span class="legal-clause-badge text-[11px] font-label-code px-2.5 py-1 rounded-md bg-[#1a1a1a] text-[#d1d1d1] border border-white/10 uppercase tracking-wider">
+            Cláusula 2.0 // Derechos de Autor
+          </span>
+          <span class="text-xs font-label-code text-[#888888]">Propiedad Intelectual</span>
+        </div>
+        <h3 class="legal-title text-lg sm:text-xl font-bold text-white mb-3">
+          Titularidad, Marcas y Componentes Reutilizables
+        </h3>
+        <p class="legal-paragraph text-sm sm:text-base text-[#a3a3a3] leading-relaxed mb-4">
+          <strong class="text-white font-semibold">El cliente es dueño absoluto</strong> de sus textos, imágenes, fotografías, marcas registradas, identidad corporativa y cualquier material suministrado a Lemus Studio para la integración en su sitio.
+        </p>
+        <p class="legal-paragraph text-sm sm:text-base text-[#a3a3a3] leading-relaxed mb-4">
+          <strong class="text-white font-semibold">Lemus Studio conserva todos los derechos morales y patrimoniales</strong> sobre los métodos de ingeniería, arquitecturas de software base, utilidades de código, scripts propietarios, componentes visuales base reutilizables y librerías internas empleadas para la construcción del proyecto.
+        </p>
+        <div class="legal-highlight-box rounded-xl p-4 sm:p-5 bg-[#181818] border border-white/15 text-xs sm:text-sm text-[#d1d1d1] leading-relaxed">
+          Se otorga al cliente una licencia perpetua, mundial e intransferible para el uso, ejecución y explotación comercial ininterrumpida de la solución digital entregada dentro del entorno y dominio acordados.
+        </div>
+      </article>
+
+      <!-- CLÁUSULA 3: Alcance del Proyecto & Solicitudes Adicionales -->
+      <article class="legal-card rounded-2xl p-6 sm:p-8 bg-[#121212] border border-white/10 transition-all duration-200">
+        <div class="flex items-center justify-between gap-4 mb-4">
+          <span class="legal-clause-badge text-[11px] font-label-code px-2.5 py-1 rounded-md bg-[#1a1a1a] text-[#d1d1d1] border border-white/10 uppercase tracking-wider">
+            Cláusula 3.0 // Alcance Técnico
+          </span>
+          <span class="text-xs font-label-code text-[#888888]">Control de Cambios</span>
+        </div>
+        <h3 class="legal-title text-lg sm:text-xl font-bold text-white mb-3">
+          Delimitación del Alcance y Modificaciones Posteriores
+        </h3>
+        <p class="legal-paragraph text-sm sm:text-base text-[#a3a3a3] leading-relaxed mb-3">
+          Cada proyecto se elabora estrictamente conforme a las especificaciones y funcionalidades aprobadas en la propuesta o cotización formal inicial.
+        </p>
+        <p class="legal-paragraph text-sm sm:text-base text-[#a3a3a3] leading-relaxed">
+          Cualquier solicitud de características adicionales, integraciones externas no presupuestadas, reestructuraciones totales de diseño o cambios de lógica solicitados después de iniciada la etapa de producción se categorizarán como <em class="text-white not-italic font-semibold">Requerimiento Adicional (Change Request)</em>, cotizándose de forma independiente tanto en honorarios como en plazos de entrega.
+        </p>
+      </article>
+
+      <!-- CLÁUSULA 4: Aceptación y Entrega Final -->
+      <article class="legal-card rounded-2xl p-6 sm:p-8 bg-[#121212] border border-white/10 transition-all duration-200">
+        <div class="flex items-center justify-between gap-4 mb-4">
+          <span class="legal-clause-badge text-[11px] font-label-code px-2.5 py-1 rounded-md bg-[#1a1a1a] text-[#d1d1d1] border border-white/10 uppercase tracking-wider">
+            Cláusula 4.0 // Entregables
+          </span>
+          <span class="text-xs font-label-code text-[#888888]">Conclusión</span>
+        </div>
+        <h3 class="legal-title text-lg sm:text-xl font-bold text-white mb-3">
+          Aceptación, Pruebas y Cierre de Proyecto
+        </h3>
+        <p class="legal-paragraph text-sm sm:text-base text-[#a3a3a3] leading-relaxed mb-3">
+          Una vez finalizado el desarrollo, el cliente dispondrá de un entorno de pruebas o previsualización. La publicación del sitio en su dominio final, la puesta en producción comercial o el transcurso de 7 días continuos sin observaciones técnicas por escrito se considerará como <strong class="text-white font-semibold">Aceptación Formal a Plena Satisfacción</strong>.
+        </p>
+      </article>
+
+      <!-- CLÁUSULA 5: Limitación de Responsabilidad ante Terceros -->
+      <article class="legal-card rounded-2xl p-6 sm:p-8 bg-[#121212] border border-white/10 transition-all duration-200">
+        <div class="flex items-center justify-between gap-4 mb-4">
+          <span class="legal-clause-badge text-[11px] font-label-code px-2.5 py-1 rounded-md bg-[#1a1a1a] text-[#d1d1d1] border border-white/10 uppercase tracking-wider">
+            Cláusula 5.0 // Terceros e Infraestructura
+          </span>
+          <span class="text-xs font-label-code text-[#888888]">Responsabilidad</span>
+        </div>
+        <h3 class="legal-title text-lg sm:text-xl font-bold text-white mb-3">
+          Exención por Proveedores Externos e Infraestructura en la Nube
+        </h3>
+        <p class="legal-paragraph text-sm sm:text-base text-[#a3a3a3] leading-relaxed mb-3">
+          Lemus Studio no será legalmente responsable por interrupciones, pérdidas de conectividad o modificaciones de servicio atribuibles a terceros proveedores de hosting, nube o infraestructura externa (tales como Vercel, AWS, Cloudflare, registradores de dominio DNS, pasarelas bancarias o cambios de políticas en APIs de WhatsApp, Meta, Google o Stripe).
+        </p>
+        <p class="legal-paragraph text-xs sm:text-sm text-[#888888] leading-relaxed">
+          En ningún caso Lemus Studio responderá por lucro cesante, daños indirectos, pérdida de negocio ni costos derivados de ciberataques dirigidos contra la infraestructura del cliente o filtraciones ocasionadas por mal resguardo de credenciales.
+        </p>
+      </article>
+
+      <!-- CLÁUSULA 6: Garantía Técnica y Mantenimiento -->
+      <article class="legal-card rounded-2xl p-6 sm:p-8 bg-[#121212] border border-white/10 transition-all duration-200">
+        <div class="flex items-center justify-between gap-4 mb-4">
+          <span class="legal-clause-badge text-[11px] font-label-code px-2.5 py-1 rounded-md bg-[#1a1a1a] text-[#d1d1d1] border border-white/10 uppercase tracking-wider">
+            Cláusula 6.0 // Garantía
+          </span>
+          <span class="text-xs font-label-code text-[#888888]">30 Días</span>
+        </div>
+        <h3 class="legal-title text-lg sm:text-xl font-bold text-white mb-3">
+          Garantía Técnica Limitada y Soporte
+        </h3>
+        <p class="legal-paragraph text-sm sm:text-base text-[#a3a3a3] leading-relaxed mb-3">
+          Todos los proyectos cuentan con una <strong class="text-white font-semibold">garantía de 30 días calendario</strong> tras el despliegue final para la corrección sin costo de cualquier bug, error de renderizado o anomalía técnica imputable directamente a nuestro código.
+        </p>
+        <p class="legal-paragraph text-xs sm:text-sm text-[#888888] leading-relaxed">
+          Esta garantía queda sin efecto si el código, base de datos o servidor son alterados o intervenidos por el cliente o terceros no autorizados por Lemus Studio. Mantenimientos evolutivos o actualizaciones posteriores se cotizan por separado.
+        </p>
+      </article>
+
+      <!-- CLÁUSULA 7: Pagos y Depósitos -->
+      <article class="legal-card rounded-2xl p-6 sm:p-8 bg-[#121212] border border-white/10 transition-all duration-200">
+        <div class="flex items-center justify-between gap-4 mb-4">
+          <span class="legal-clause-badge text-[11px] font-label-code px-2.5 py-1 rounded-md bg-[#1a1a1a] text-[#d1d1d1] border border-white/10 uppercase tracking-wider">
+            Cláusula 7.0 // Honorarios
+          </span>
+          <span class="text-xs font-label-code text-[#888888]">Anticipos</span>
+        </div>
+        <h3 class="legal-title text-lg sm:text-xl font-bold text-white mb-3">
+          Anticipos y Términos de Pago
+        </h3>
+        <p class="legal-paragraph text-sm sm:text-base text-[#a3a3a3] leading-relaxed mb-2">
+          Los anticipos acordados cubren la reserva de tiempo técnico, arquitectura previa y horas de desarrollo de software iniciales, por lo que <strong class="text-white font-semibold">no son reembolsables</strong> una vez iniciada la fase de diseño o programación.
+        </p>
+        <p class="legal-paragraph text-xs sm:text-sm text-[#888888] leading-relaxed">
+          La entrega de accesos administrativos definitivos, credenciales finales y transferencia de código se realizará contra el saldo total liquidado del proyecto.
+        </p>
+      </article>
+    </section>
+
+    <!-- SECTION 2: POLÍTICA DE PRIVACIDAD -->
+    <section id="privacidad" class="space-y-8 mb-20 scroll-mt-32">
+      <div class="flex items-center gap-3 pb-2 border-b border-white/15">
+        <span class="font-label-code text-xs text-[#888888]">[PARTE 02]</span>
+        <h2 class="legal-title text-xl sm:text-2xl font-bold tracking-tight text-white">
+          Política de Privacidad y Tratamiento de Datos
+        </h2>
+      </div>
+
+      <!-- CLÁUSULA 8: Privacidad de Datos y Confidencialidad (FOTO) -->
+      <article class="legal-card rounded-2xl p-6 sm:p-8 bg-[#121212] border border-white/10 transition-all duration-200">
+        <div class="flex items-center justify-between gap-4 mb-4">
+          <span class="legal-clause-badge text-[11px] font-label-code px-2.5 py-1 rounded-md bg-[#1a1a1a] text-[#d1d1d1] border border-white/10 uppercase tracking-wider">
+            Cláusula 8.0 // Protección de Datos
+          </span>
+          <span class="text-xs font-label-code text-[#22c55e]">Cero Terceros</span>
+        </div>
+        <h3 class="legal-title text-lg sm:text-xl font-bold text-white mb-3">
+          Uso Exclusivo de Datos para Cotizaciones y Cero Cesión a Terceros
+        </h3>
+        <p class="legal-paragraph text-sm sm:text-base text-[#a3a3a3] leading-relaxed mb-4">
+          En cumplimiento de los principios de transparencia y lealtad informática, hacemos constar que los datos suministrados por los usuarios a través del sitio web (tales como nombre, empresa, teléfono de contacto, dirección de correo electrónico o requerimientos de proyecto):
+        </p>
+        
+        <div class="legal-highlight-box rounded-xl p-5 bg-[#181818] border border-white/15 space-y-3 text-sm text-[#e5e5e5] mb-4">
+          <div class="flex items-start gap-3">
+            <span class="material-symbols-outlined text-green-400 text-[20px] mt-0.5">check_circle</span>
+            <p><strong>Finalidad estricta:</strong> Solo se utilizan para responder consultas, coordinar especificaciones técnicas y elaborar cotizaciones personalizadas solicitadas por el usuario.</p>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="material-symbols-outlined text-green-400 text-[20px] mt-0.5">verified_user</span>
+            <p><strong>Cero comercialización:</strong> Lemus Studio nunca vende, alquila, comercializa, distribuye ni comparte información de contacto con terceros, agencias de publicidad o bases de datos comerciales bajo ninguna circunstancia.</p>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="material-symbols-outlined text-green-400 text-[20px] mt-0.5">lock</span>
+            <p><strong>Secreto profesional:</strong> Toda idea de negocio o documentación preliminar compartida está amparada bajo deber de estricta reserva y confidencialidad.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- CLÁUSULA 9: Cookies y Preferencias Locales -->
+      <article class="legal-card rounded-2xl p-6 sm:p-8 bg-[#121212] border border-white/10 transition-all duration-200">
+        <div class="flex items-center justify-between gap-4 mb-4">
+          <span class="legal-clause-badge text-[11px] font-label-code px-2.5 py-1 rounded-md bg-[#1a1a1a] text-[#d1d1d1] border border-white/10 uppercase tracking-wider">
+            Cláusula 9.0 // Cookies & Almacenamiento
+          </span>
+          <span class="text-xs font-label-code text-[#888888]">Rendimiento</span>
+        </div>
+        <h3 class="legal-title text-lg sm:text-xl font-bold text-white mb-3">
+          Política de Cookies No Invasivas
+        </h3>
+        <p class="legal-paragraph text-sm sm:text-base text-[#a3a3a3] leading-relaxed mb-3">
+          Este sitio web no utiliza cookies de seguimiento invasivo, spyware ni píxeles comerciales de retargeting invasivo. Empleamos únicamente mecanismos de almacenamiento local (<code class="text-white text-xs bg-black/40 px-1.5 py-0.5 rounded border border-white/10">localStorage</code>) en su navegador para recordar la preferencia visual de tema (modo claro o modo oscuro), garantizando una experiencia de usuario veloz e instantánea.
+        </p>
+      </article>
+
+      <!-- CLÁUSULA 10: Enlace Directo a WhatsApp -->
+      <article class="legal-card rounded-2xl p-6 sm:p-8 bg-[#121212] border border-white/10 transition-all duration-200">
+        <div class="flex items-center justify-between gap-4 mb-4">
+          <span class="legal-clause-badge text-[11px] font-label-code px-2.5 py-1 rounded-md bg-[#1a1a1a] text-[#d1d1d1] border border-white/10 uppercase tracking-wider">
+            Cláusula 10.0 // Servicios Conectados
+          </span>
+          <span class="text-xs font-label-code text-[#888888]">WhatsApp</span>
+        </div>
+        <h3 class="legal-title text-lg sm:text-xl font-bold text-white mb-3">
+          Canalización Externa vía WhatsApp
+        </h3>
+        <p class="legal-paragraph text-sm sm:text-base text-[#a3a3a3] leading-relaxed mb-3">
+          Al utilizar nuestro formulario para generar mensajes y pulsar el enlace hacia WhatsApp, usted accede a la plataforma provista por WhatsApp LLC / Meta Platforms Inc. Dicha interacción está protegida por el cifrado de extremo a extremo propio de dicha aplicación y se sujeta a los términos y políticas de privacidad de Meta Platforms.
+        </p>
+      </article>
+
+      <!-- CLÁUSULA 11: Legislación y Jurisdicción -->
+      <article class="legal-card rounded-2xl p-6 sm:p-8 bg-[#121212] border border-white/10 transition-all duration-200">
+        <div class="flex items-center justify-between gap-4 mb-4">
+          <span class="legal-clause-badge text-[11px] font-label-code px-2.5 py-1 rounded-md bg-[#1a1a1a] text-[#d1d1d1] border border-white/10 uppercase tracking-wider">
+            Cláusula 11.0 // Marco Legal
+          </span>
+          <span class="text-xs font-label-code text-[#888888]">Guatemala</span>
+        </div>
+        <h3 class="legal-title text-lg sm:text-xl font-bold text-white mb-3">
+          Legislación Aplicable y Fuero Judicial
+        </h3>
+        <p class="legal-paragraph text-sm sm:text-base text-[#a3a3a3] leading-relaxed mb-3">
+          Los presentes términos y políticas se regirán, interpretarán y aplicarán de conformidad con el ordenamiento jurídico de la <strong class="text-white font-semibold">República de Guatemala</strong>. Para la resolución de cualquier diferendo, litigio o controversia que pudiera derivarse de los servicios prestados o del uso de este sitio, las partes renuncian a cualquier otro fuero que pudiera corresponderles y se someten expresamente a la jurisdicción de los tribunales competentes de la Ciudad de Guatemala.
+        </p>
+      </article>
+    </section>
+
+    <!-- SECTION 3: CANAL DE CONTACTO LEGAL -->
+    <section id="contacto-legal" class="mb-16 scroll-mt-32">
+      <div class="legal-card rounded-3xl p-8 sm:p-10 bg-gradient-to-b from-[#141414] to-[#0c0c0c] border border-white/15 text-center">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-label-code uppercase tracking-wider border border-white/10 bg-[#1c1c1c] text-white mb-4">
+          <span>Consultas Contractuales</span>
+        </div>
+        <h2 class="legal-title text-2xl sm:text-3xl font-bold text-white mb-4 tracking-tight">
+          ¿Tienes dudas sobre nuestros términos o requieres un NDA?
+        </h2>
+        <p class="subtext-muted text-sm sm:text-base text-[#9a9a9a] max-w-xl mx-auto mb-8 leading-relaxed">
+          Para solicitar acuerdos de confidencialidad específicos (NDA) para tu empresa o formular consultas sobre este marco legal, contáctanos directamente:
+        </p>
+        
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 text-xs font-label-code mb-8">
+          <a class="px-5 py-3 rounded-full border border-white/15 bg-[#181818] hover:bg-[#222222] text-white flex items-center gap-2 transition-all" href="mailto:lemustudioo@gmail.com">
+            <span class="material-symbols-outlined text-[16px]">mail</span>
+            <span>lemustudioo@gmail.com</span>
+          </a>
+          <a class="px-5 py-3 rounded-full border border-white/15 bg-[#181818] hover:bg-[#222222] text-white flex items-center gap-2 transition-all" href="https://wa.me/50246141706" target="_blank" rel="noopener">
+            <span class="material-symbols-outlined text-[16px]">chat</span>
+            <span>+502 4614-1706 (Guatemala)</span>
+          </a>
+        </div>
+
+        <a class="inline-flex items-center gap-2 text-xs font-label-code uppercase tracking-wider text-white hover:underline underline-offset-4" href="index.html">
+          <span class="material-symbols-outlined text-[14px]">arrow_back</span>
+          <span>Volver al portafolio principal de Lemus Studio</span>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- EDITORIAL MINIMAL FOOTER -->
+  <footer class="w-full border-t border-white/10 bg-[#0a0a0a] transition-colors duration-300">
+    <div class="w-full max-w-5xl mx-auto px-6 py-10 flex flex-col md:flex-row justify-between items-center gap-6">
+      <!-- Brand & Copyright -->
+      <div class="flex flex-col sm:flex-row items-center gap-3 text-center sm:text-left">
+        <a class="group text-sm font-bold tracking-tight text-white flex items-center gap-2" href="index.html">
+          <img alt="Lemus Studio" class="w-5 h-5 object-contain transition-transform duration-300 group-hover:rotate-6 border border-white/10 rounded-sm bg-black" src="./assets/logo.jpg" onerror="this.onerror=null;this.src='https://lh3.googleusercontent.com/aida-public/AB6AXuBNSK96enIE5M1ZVH3fQuna-wiFiRJb4aKXJ39A4f_2Qwhs9I8xma3hxyQQWsrjUTYdEhCdoLSAJTDoeNMnMCOQT_4Gvysif8BlngBf4nal_lnTxXuMuP1ko2SgUcqlyoxgVIzMp4YZUgE4WswDNDxRUZ0TBuxw3o4I-_6_7i7zTzPtL1NmsV92N-GWbeySPs5PNB9ZCIJhY8R13w9CWfQSW6jpI4F4dF2JLkq8rfArEoNctQV5JVE6'"/>
+          <span>Lemus Studio</span>
+        </a>
+        <span class="hidden sm:inline text-white/20">|</span>
+        <span class="subtext-muted text-xs text-[#888888]">
+          © 2025 Lemus Studio. Craft over code. Todos los derechos reservados.
+        </span>
+      </div>
+
+      <!-- Links -->
+      <div class="flex items-center gap-6 text-xs font-label-code text-[#888888]">
+        <a class="nav-kinetic-link hover:text-white transition-colors duration-200" href="index.html">Inicio</a>
+        <a class="nav-kinetic-link hover:text-white transition-colors duration-200" href="https://wa.me/50246141706" target="_blank" rel="noopener">WhatsApp</a>
+        <a class="nav-kinetic-link hover:text-white transition-colors duration-200" href="mailto:lemustudioo@gmail.com">Correo</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCRIPT: Theme Toggle & Persistence -->
+  <script>
+    // Synchronize Theme on Load from localStorage
+    (function initTheme() {
+      try {
+        const savedTheme = localStorage.getItem('lemus_theme');
+        if (savedTheme === 'light') {
+          document.documentElement.classList.remove('dark');
+        } else if (savedTheme === 'dark') {
+          document.documentElement.classList.add('dark');
+        }
+      } catch(e) {}
+      updateThemeUI(document.documentElement.classList.contains('dark'));
+    })();
+
+    function updateThemeUI(isDark) {
+      const icon = document.getElementById('theme-toggle-icon');
+      const toggleBtn = document.getElementById('theme-toggle');
+      if (icon) {
+        icon.textContent = isDark ? 'light_mode' : 'dark_mode';
+      }
+      if (toggleBtn) {
+        toggleBtn.setAttribute('title', isDark ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro');
+        toggleBtn.setAttribute('aria-label', isDark ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro');
+      }
+    }
+
+    function toggleThemeWithFeedback(btn) {
+      if (btn) {
+        btn.classList.add('is-spinning');
+        setTimeout(() => btn.classList.remove('is-spinning'), 600);
+      }
+      const htmlEl = document.documentElement;
+      const isDark = htmlEl.classList.toggle('dark');
+      try {
+        localStorage.setItem('lemus_theme', isDark ? 'dark' : 'light');
+      } catch (e) {}
+      updateThemeUI(isDark);
+    }
+  </script>
+</body>
+</html>
